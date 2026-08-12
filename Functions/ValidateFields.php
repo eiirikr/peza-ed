@@ -192,6 +192,25 @@ class ValidateFields extends DBConnection{
         }
     }
 
+    public function __checkValidAddress($Address, $buyerRecord)
+    {
+        if (empty($buyerRecord)) {
+            return false;
+        }
+
+        $masterAddressParts = array_filter([
+            isset($buyerRecord['Expadr1']) ? $buyerRecord['Expadr1'] : '',
+            isset($buyerRecord['Expadr2']) ? $buyerRecord['Expadr2'] : '',
+            isset($buyerRecord['Expadr3']) ? $buyerRecord['Expadr3'] : '',
+            isset($buyerRecord['Expadr4']) ? $buyerRecord['Expadr4'] : ''
+        ]);
+
+        $masterAddress = strtoupper(trim(implode(' ', $masterAddressParts)));
+        $excelAddress  = strtoupper(trim(preg_replace('/\s+/', ' ', $Address)));
+
+        return ($masterAddress === $excelAddress);
+    }
+
     public function __checkValidLocationOfGoods($val){
 
         $sql    = "SELECT TOP 1 SHD_COD FROM dbo.GBSHDTAB_D WHERE SHD_COD = '$val'";

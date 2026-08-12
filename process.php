@@ -214,6 +214,15 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $errorCounter++; 
                     }
 
+                    if( !empty($Address) && !empty($checkConsigneeExists) ) {
+
+                        if ( !$validateFunc->__checkValidAddress($Address, $checkConsigneeExists) )
+                        {
+                            $checkAddress[] = $row - 1;
+                            $errorCounter++;
+                        }
+                    }
+
                     //Port (Office of Clearance)
                     if( !empty($Port) )
                     { 
@@ -918,6 +927,13 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "ErrMsg" => "Only accept letters, numbers and few special characters (-_.,:;#$%()*/) - Required",
                                     "Column" => "Address",
                                     "Rows" => implode(", " ,$addressMatch)
+                                );
+            }
+            if(!empty($checkAddress)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Address does not match the registered address for this Consignee",
+                                    "Column" => "Address",
+                                    "Rows" => implode(", " ,$checkAddress)
                                 );
             }
             
