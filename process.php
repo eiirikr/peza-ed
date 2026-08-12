@@ -703,10 +703,21 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     { 
                         $numberOfPackage[] = $row - 1; $errorCounter1++; 
                     }
-                    if( !empty($NumberOfPackage) && ($validateFunc->match_numbers($NumberOfPackage)) == 0 )
+
+                    if ( $NumberOfPackage === '' )
                     {
-                        $numberOfPackageMatch[] = $row - 1; 
-                        $errorCounter++; 
+                        $numberOfPackageMatch[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else if ( ($validateFunc->match_numbers($NumberOfPackage)) == 0 )
+                    {
+                        $numberOfPackageMatch[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else if ( $r == 0 && (int)$NumberOfPackage <= 0 )
+                    {
+                        $numberOfPackageZero[] = $row - 1;
+                        $errorCounter++;
                     }
 
                     //PackageCode
@@ -1169,6 +1180,14 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "ErrMsg" => "Only accept letters and numbers - Required",
                                     "Column" => "Number of Package",
                                     "Rows" => implode(", " ,$numberOfPackageMatch)
+                                );
+            }
+
+            if(!empty($numberOfPackageZero)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Number of Package must be greater than 0 for the item 1",
+                                    "Column" => "Number of Package",
+                                    "Rows" => implode(", " ,$numberOfPackageZero)
                                 );
             }
 

@@ -16,7 +16,7 @@ if (isset($_POST['flow_token'])) {
 
 if (empty($token)) {
     echo "<script>
-            alert('Unauthorized access. Please log in through the system.');
+            alert('Your session has expired. Please log in again to continue.');
             window.location.href='http://testweb.intercommerce.com.ph/login.asp';
           </script>";
     exit;
@@ -41,7 +41,7 @@ if (!isset($_SESSION['flows'][$token])) {
 
     if (!$row) {
         echo "<script>
-                alert('Unauthorized access. Please log in through the system.');
+                alert('Your session has expired. Please log in again to continue.');
                 window.location.href='http://testweb.intercommerce.com.ph/login.asp';
               </script>";
         exit;
