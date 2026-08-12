@@ -169,6 +169,29 @@ class ValidateFields extends DBConnection{
         }
     }
 
+    public function __checkValidConsignee($conn, $Consignee, $cltcode)
+    {
+        $sql = "SELECT ExpCode, ExpName, Expadr1, Expadr2, Expadr3, Expadr4, expCoCode 
+                FROM BUYER 
+                WHERE cltcode = :cltcode 
+                AND UPPER(LTRIM(RTRIM(Expname))) = UPPER(LTRIM(RTRIM(:consignee)))";
+
+        try {
+            $stmt = $conn->connectIPPEZA()->prepare($sql);
+            $stmt->execute([
+                ':cltcode'   => $cltcode,
+                ':consignee' => $Consignee
+            ]);
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $result ? $result : false;
+
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
     public function __checkValidLocationOfGoods($val){
 
         $sql    = "SELECT TOP 1 SHD_COD FROM dbo.GBSHDTAB_D WHERE SHD_COD = '$val'";

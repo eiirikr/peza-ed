@@ -187,6 +187,22 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $errorCounter++; 
                     }
 
+                    if( !empty($Consignee) ) {
+
+                        $checkConsigneeExists = $validateFunc->__checkValidConsignee($conn, $Consignee, $cltcode);
+
+                        if( !$checkConsigneeExists )
+                        {
+                            $checkConsignee[] = $row - 1;
+                            $errorCounter++;
+                        }
+
+                    } else {
+
+                        $checkConsignee[] = $row - 1;
+                        $errorCounter++;
+                    }
+
                     //Address
                     if( $validateFunc->max_length($Address, 105) ) 
                     { 
@@ -870,6 +886,14 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Rows" => implode(", " ,$consigneeMatch)
                                 );
             }
+
+            if(!empty($checkConsignee)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Invalid Consignee/Buyer, please check Buyer Lookup",
+                                    "Column" => "Consignee",
+                                    "Rows" => implode(", " ,$checkConsignee)
+                                );
+            }
             
             //Address
             if(!empty($address)){
@@ -1294,10 +1318,36 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 $importer  = $lookupData->getImporters($conn, $loccod);
                 $exchRate  = $lookupData->getExchangeRate($conn, 'USD');
 
-                $chunksAddress = str_split($Address, 35);
-                $conadr1 = isset($chunksAddress[0]) ? $chunksAddress[0] : '';
-                $conadr2 = isset($chunksAddress[1]) ? $chunksAddress[1] : '';
-                $conadr3 = isset($chunksAddress[2]) ? $chunksAddress[2] : '';
+                // ----------------- CONSIGNEE ADDRESS: pull from BUYER master data ----------------- //
+                // Re-fetch the validated buyer record (same lookup used during validation)
+                // rather than re-using the free-typed $Address column from the Excel file.
+                $buyerRecord = $validateFunc->__checkValidConsignee($conn, $Consignee, $cltcode);
+
+                if ($buyerRecord) {
+
+                    // Use BUYER's own pre-split address lines directly — do NOT
+                    // re-concatenate + str_split, since that breaks mid-word.
+                    $conadr1 = isset($buyerRecord['Expadr1']) ? $buyerRecord['Expadr1'] : '';
+                    $conadr2 = isset($buyerRecord['Expadr2']) ? $buyerRecord['Expadr2'] : '';
+                    $conadr3 = isset($buyerRecord['Expadr3']) ? $buyerRecord['Expadr3'] : '';
+
+                    // BUYER has 4 lines, ConAdr only has 3 columns — fold Expadr4 into
+                    // line 3 with a space, matching how the ASP page just concatenates
+                    // Expadr1.." ".Expadr2.." ".Expadr3.." ".Expadr4 for display.
+                    if (!empty($buyerRecord['Expadr4'])) {
+                        $conadr3 = trim($conadr3 . ' ' . $buyerRecord['Expadr4']);
+                    }
+
+                } else {
+
+                    // Fallback: shouldn't happen since validation already rejected
+                    // rows where the buyer isn't found — guard anyway.
+                    $chunksAddress = str_split($Address, 35);
+                    $conadr1 = isset($chunksAddress[0]) ? $chunksAddress[0] : '';
+                    $conadr2 = isset($chunksAddress[1]) ? $chunksAddress[1] : '';
+                    $conadr3 = isset($chunksAddress[2]) ? $chunksAddress[2] : '';
+                }
+                // ----------------- END CONSIGNEE ADDRESS ----------------- //
                 
                 $modeofTransport = $lookupData->getModeofTransport($conn, $Port);
                 
