@@ -1,0 +1,1661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IMPORT>
+  <ITEMS>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>2</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>3</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>4</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>5</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>6</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>7</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>8</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>9</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>10</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>11</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>12</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>13</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>14</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>15</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>16</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>17</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>18</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>19</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>20</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>21</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>22</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>23</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>24</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>25</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>26</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>27</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>28</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>29</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>30</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>31</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>32</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>33</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>34</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>35</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>36</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>37</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>38</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>39</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>40</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>41</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>42</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>43</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>44</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>45</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>46</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>47</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>48</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>49</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED 1</MarksandNumbers1>
+      <MarksandNumbers2>1X40 CONTAINBER</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>50</NoOfPackage>
+      <InvoiceValue>1001.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>GOODS DESC 1</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>62012010</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>JP</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+  </ITEMS>
+  <ADDITIONALCTN>
+    <ContainerNo5>EEEE1234567</ContainerNo5>
+    <ContainerNo6>FFFF1234567</ContainerNo6>
+    <ContainerNo7>GGGG1234567</ContainerNo7>
+    <ContainerNo8>HHHH1234567</ContainerNo8>
+  </ADDITIONALCTN>
+</IMPORT>

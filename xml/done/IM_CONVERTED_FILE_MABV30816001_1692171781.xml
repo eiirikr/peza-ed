@@ -1,0 +1,1656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IMPORT>
+  <ITEMS>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 123</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>1.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 124</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>2.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 125</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>3.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 126</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>4.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 127</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>5.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 128</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>6.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 129</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>7.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 130</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>8.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 131</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>9.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 132</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>10.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 133</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>11.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 134</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>12.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 135</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>13.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 136</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>14.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 137</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>15.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 138</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>16.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 139</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>17.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 140</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>18.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 141</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>19.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 142</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>20.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 143</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>21.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 144</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>22.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 145</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>23.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 146</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>24.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 147</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>25.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 148</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>26.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 149</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>27.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 150</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>28.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 151</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>29.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 152</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>30.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 153</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>31.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 154</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>32.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 155</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>33.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 156</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>34.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 157</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>35.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 158</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>36.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 159</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>37.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 160</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>38.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 161</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>39.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 162</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>40.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 163</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>41.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 164</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>42.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 165</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>43.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 166</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>44.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 167</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>45.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 168</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>46.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 169</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>47.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 170</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>48.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 171</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>49.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>NTC SAMPLE NO. 172</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>50.00</InvoiceValue>
+      <InvoiceCurr>JPY</InvoiceCurr>
+      <ContainerNo1></ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER GOODS DESC 1 - SHIRT / POLO / LAPTOP / MOUSE / PC / OTHERS / TUMBLER AND WATER</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE 1</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01013090</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>1.00</ItemGrossWeight>
+      <ItemNetweight>1.00</ItemNetweight>
+      <Preferential>ACFTA</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>0N1</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TESTBOL221120222</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+  </ITEMS>
+  <ADDITIONALCTN/>
+</IMPORT>

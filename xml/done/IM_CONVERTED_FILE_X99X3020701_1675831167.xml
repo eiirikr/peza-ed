@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IMPORT>
+  <ITEMS>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>6</NoOfPackage>
+      <InvoiceValue>880.51</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>640 PCS OF IKEA SNOBBIG PLACE MAT 45X33 LIGHT GREY AP JP POLYETHYLENE</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>640</SupplementaryValue>
+      <TariffHeading>63025300</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>TW</CountryofOriginCode>
+      <ItemGrossWeight>39.04</ItemGrossWeight>
+      <ItemNetweight>38.40</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>13</NoOfPackage>
+      <InvoiceValue>1981.15</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>1440 PCS OF IKEA SOLHETTA GU10 345LM DIMMABLE AP</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>1440</SupplementaryValue>
+      <TariffHeading>85395290</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>103.68</ItemGrossWeight>
+      <ItemNetweight>84.96</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>157.47</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>140 PCS OF IKEA IKEA 365 DRY FOOD JAR W LID 0,3L TRSP/WHITE AP JP</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>140</SupplementaryValue>
+      <TariffHeading>39241099</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>IN</CountryofOriginCode>
+      <ItemGrossWeight>18.48</ItemGrossWeight>
+      <ItemNetweight>17.92</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>325.03</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>63 PCS OF IKEA KAMPIG 3-ARM SW HOOK BRASS-COLOUR AP</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>63</SupplementaryValue>
+      <TariffHeading>83025000</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>IN</CountryofOriginCode>
+      <ItemGrossWeight>20.29</ItemGrossWeight>
+      <ItemNetweight>16.63</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>44.03</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>16 PCS OF IKEA TJENA N DESK ORG 18X17 WHITE AP</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>16</SupplementaryValue>
+      <TariffHeading>48196000</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>6.99</ItemGrossWeight>
+      <ItemNetweight>6.90</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>99.28</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>24 PCS OF IKEA FRAMFUSIG SINGLE TRACK RAIL W GLIDE 100-180 WHI AP</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>24</SupplementaryValue>
+      <TariffHeading>83024190</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>10.56</ItemGrossWeight>
+      <ItemNetweight>8.64</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>1548.33</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>40 PCS OF IKEA RENBERGET N SWIVEL CHR BOMSTAD BLACK AP</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>40</SupplementaryValue>
+      <TariffHeading>94013900</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>504.00</ItemGrossWeight>
+      <ItemNetweight>433.20</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>62.58</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>44 PCS OF IKEA SOLMOTT CUSHION CVR 50X50 PINK MULTI/STRIPED AP COTTON</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>44</SupplementaryValue>
+      <TariffHeading>63049200</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>IN</CountryofOriginCode>
+      <ItemGrossWeight>7.35</ItemGrossWeight>
+      <ItemNetweight>6.20</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>55.55</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>36 PCS OF IKEA OFANTLIGT BOWL 13 WHITE AP</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>36</SupplementaryValue>
+      <TariffHeading>69111000</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>TR</CountryofOriginCode>
+      <ItemGrossWeight>13.03</ItemGrossWeight>
+      <ItemNetweight>12.96</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>152.83</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>60 PCS OF IKEA ROSENSKARM PWC F ERGO PILLOW 33X50 WHITE AP 85 % COTTON, 15 % LYOCELL</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>60</SupplementaryValue>
+      <TariffHeading>63023100</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>TR</CountryofOriginCode>
+      <ItemGrossWeight>5.52</ItemGrossWeight>
+      <ItemNetweight>4.44</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>90.80</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>12 PCS OF IKEA LINDBYN TABLE MIRROR 14X27 BLACK AP</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>12</SupplementaryValue>
+      <TariffHeading>70099200</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>CN</CountryofOriginCode>
+      <ItemGrossWeight>7.80</ItemGrossWeight>
+      <ItemNetweight>6.76</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>0</NoOfPackage>
+      <InvoiceValue>191.87</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>40 PCS OF IKEA SALVIKEN BATH TOWEL 70X140 ANTHRACITE AP COTTON</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>40</SupplementaryValue>
+      <TariffHeading>63026000</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>IN</CountryofOriginCode>
+      <ItemGrossWeight>20.40</ItemGrossWeight>
+      <ItemNetweight>20.32</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+  </ITEMS>
+  <ADDITIONALCTN/>
+</IMPORT>

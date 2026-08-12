@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IMPORT>
+  <ITEMS>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>ATTACHED INVOICE AND PACKING LIST</MarksandNumbers2>
+      <PackageCode>CT</PackageCode>
+      <NoOfPackage>49</NoOfPackage>
+      <InvoiceValue>61580.20</InvoiceValue>
+      <InvoiceCurr>EUR</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>27,991 PACKS OF RISPOND- 4(RISPERIDONE TABLETS 4MG) / LTO# CDRR-NCR-DI-440313 / CPR# DRP-8018 / ATRIG# ATR2022 00009692</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>TRUE</InsuranceFlag>
+      <InvoiceNumber>ML1186/23-24</InvoiceNumber>
+      <SupplementaryValue>0</SupplementaryValue>
+      <TariffHeading>30049099</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>VN</CountryofOriginCode>
+      <ItemGrossWeight>397.94</ItemGrossWeight>
+      <ItemNetweight>101.08</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TEST0001</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG>ATRBIR1234567</ATRIG>
+      <ATRIGDATE>2023-11-30</ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2>ATTACHED INVOICE AND PACKING LIST</MarksandNumbers2>
+      <PackageCode>CT</PackageCode>
+      <NoOfPackage>49</NoOfPackage>
+      <InvoiceValue>61580.20</InvoiceValue>
+      <InvoiceCurr>EUR</InvoiceCurr>
+      <ContainerNo1>AAAA1234567</ContainerNo1>
+      <ContainerNo2>BBBB1234567</ContainerNo2>
+      <ContainerNo3>CCCC1234567</ContainerNo3>
+      <ContainerNo4>DDDD1234567</ContainerNo4>
+      <GoodsDescription>27,991 PACKS OF RISPOND- 4(RISPERIDONE TABLETS 4MG) / LTO# CDRR-NCR-DI-440313 / CPR# DRP-8018 / ATRIG# ATR2022 00009692</GoodsDescription>
+      <OtherChargesFlag>FALSE</OtherChargesFlag>
+      <InsuranceFlag>TRUE</InsuranceFlag>
+      <InvoiceNumber>ML1186/23-24</InvoiceNumber>
+      <SupplementaryValue>0</SupplementaryValue>
+      <TariffHeading>30049099</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>VN</CountryofOriginCode>
+      <ItemGrossWeight>397.94</ItemGrossWeight>
+      <ItemNetweight>101.08</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>TEST0001</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG>ATRBIR1234567</ATRIG>
+      <ATRIGDATE>2023-11-30</ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+  </ITEMS>
+  <ADDITIONALCTN>
+    <ContainerNo5>EEEE1234567</ContainerNo5>
+    <ContainerNo6>FFFF1234567</ContainerNo6>
+    <ContainerNo7>GGGG1234567</ContainerNo7>
+    <ContainerNo8>HHHH1234567</ContainerNo8>
+    <ContainerNo9>IIII1234567</ContainerNo9>
+    <ContainerNo10>JJJJ1234567</ContainerNo10>
+    <ContainerNo11>KKKK1234567</ContainerNo11>
+    <ContainerNo12>LLLL1234567</ContainerNo12>
+    <ContainerNo13>BBBB1234567</ContainerNo13>
+  </ADDITIONALCTN>
+</IMPORT>

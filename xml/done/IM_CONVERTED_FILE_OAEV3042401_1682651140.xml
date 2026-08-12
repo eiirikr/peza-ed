@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IMPORT>
+  <ITEMS>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2></MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>109</NoOfPackage>
+      <InvoiceValue>469.69</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>SUDU8783750</ContainerNo1>
+      <ContainerNo2>TCKU7991469</ContainerNo2>
+      <ContainerNo3>CRXU9970776</ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GREASE L2 16KG - 37.124 KGS</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>7820230718/719</InvoiceNumber>
+      <SupplementaryValue>37</SupplementaryValue>
+      <TariffHeading>27101944</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>MY</CountryofOriginCode>
+      <ItemGrossWeight>37.12</ItemGrossWeight>
+      <ItemNetweight>37.12</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>226312900</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+    <Item>
+      <MarksandNumbers1>AS ADDRESSED</MarksandNumbers1>
+      <MarksandNumbers2></MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>109</NoOfPackage>
+      <InvoiceValue>469.69</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>SUDU8783750</ContainerNo1>
+      <ContainerNo2>TCKU7991469</ContainerNo2>
+      <ContainerNo3>CRXU9970776</ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>GREASE L2 16KG - 37.124 KGS</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>7820230718/719</InvoiceNumber>
+      <SupplementaryValue>37</SupplementaryValue>
+      <TariffHeading>27101944</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>MY</CountryofOriginCode>
+      <ItemGrossWeight>37.12</ItemGrossWeight>
+      <ItemNetweight>37.12</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>226312900</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+  </ITEMS>
+  <ADDITIONALCTN/>
+</IMPORT>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IMPORT>
+  <ITEMS>
+    <Item>
+      <MarksandNumbers1>1X40 HC 118 PKGS IKEA HOME</MarksandNumbers1>
+      <MarksandNumbers2>FURNISHING PRODUCT</MarksandNumbers2>
+      <PackageCode>PK</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>152.83</InvoiceValue>
+      <InvoiceCurr>USD</InvoiceCurr>
+      <ContainerNo1>TEMU6175850</ContainerNo1>
+      <ContainerNo2></ContainerNo2>
+      <ContainerNo3></ContainerNo3>
+      <ContainerNo4></ContainerNo4>
+      <GoodsDescription>60 PCS OF IKEA ROSENSKARM PWC F ERGO PILLOW 33X50 WHITE AP 85 % COTTON, 15 % LYOCELL</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>025DT221213133784</InvoiceNumber>
+      <SupplementaryValue>60</SupplementaryValue>
+      <TariffHeading>63023100</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>TR</CountryofOriginCode>
+      <ItemGrossWeight>5.52</ItemGrossWeight>
+      <ItemNetweight>4.44</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>NNNNN</ValuationCode>
+      <Airbill_BLNumber>EGLV091230760622</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode>000000</SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+  </ITEMS>
+  <ADDITIONALCTN/>
+</IMPORT>

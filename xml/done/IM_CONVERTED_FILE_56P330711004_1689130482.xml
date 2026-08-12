@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IMPORT>
+  <ITEMS>
+    <Item>
+      <MarksandNumbers1>NO MARKS</MarksandNumbers1>
+      <MarksandNumbers2>NO MARKS</MarksandNumbers2>
+      <PackageCode>AE</PackageCode>
+      <NoOfPackage>1</NoOfPackage>
+      <InvoiceValue>1000.00</InvoiceValue>
+      <InvoiceCurr>THB</InvoiceCurr>
+      <ContainerNo1>CONT1111111</ContainerNo1>
+      <ContainerNo2>CONT2222222</ContainerNo2>
+      <ContainerNo3>CONT3333333</ContainerNo3>
+      <ContainerNo4>CONT4444444</ContainerNo4>
+      <GoodsDescription>GOODS DESC</GoodsDescription>
+      <OtherChargesFlag>TRUE</OtherChargesFlag>
+      <InsuranceFlag>FALSE</InsuranceFlag>
+      <InvoiceNumber>TEST INVOICE</InvoiceNumber>
+      <SupplementaryValue>1</SupplementaryValue>
+      <TariffHeading>01012100</TariffHeading>
+      <TariffExtension>000</TariffExtension>
+      <TARSPEC_AICODE></TARSPEC_AICODE>
+      <CountryofOriginCode>HK</CountryofOriginCode>
+      <ItemGrossWeight>0.50</ItemGrossWeight>
+      <ItemNetweight>0.50</ItemNetweight>
+      <Preferential>NONE</Preferential>
+      <NationalCode>4000</NationalCode>
+      <ExtensionCode>000</ExtensionCode>
+      <ValuationCode>YYYYY</ValuationCode>
+      <Airbill_BLNumber>MAR18MSTR08</Airbill_BLNumber>
+      <PrevDoc></PrevDoc>
+      <SPECode></SPECode>
+      <ATRIG></ATRIG>
+      <ATRIGDATE></ATRIGDATE>
+      <MSP></MSP>
+    </Item>
+  </ITEMS>
+  <ADDITIONALCTN>
+    <ContainerNo5>CONT5555555</ContainerNo5>
+    <ContainerNo6>CONT7777777</ContainerNo6>
+  </ADDITIONALCTN>
+</IMPORT>
