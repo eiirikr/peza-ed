@@ -140,7 +140,7 @@ if ( isset($_GET['msg']) && $_GET['msg'] == 'success' )
 						}
 						else 
 						{
-							echo "<a href='http://testweb.intercommerce.com.ph/WebCWS/cws_impdec.asp?applno={$applNo}&status={$stats}' id='back' class='btn btn-default btn-sm btn-block'><< Back to page </a>";
+							echo "<a href='http://testweb.intercommerce.com.ph/webcws/ptops_ed_step1PEZAEXPlocEXPRESS.asp' id='back' class='btn btn-default btn-sm btn-block'><< Back to page </a>";
 						}
 					?>
                 </div>
