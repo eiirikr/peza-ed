@@ -225,6 +225,16 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                             $checkOfficeOfClearance[] = $row - 1; 
                             $errorCounter++; 
                         } else {
+
+                            // Case-sensitive check: DB match is case-insensitive by default,
+                            // so confirm the Excel value's casing exactly matches offClrCod
+                            // as stored in DmOffClr.
+                            if ( strcmp($Port, $checkOfficeOfClearanceExists['offClrCod']) !== 0 )
+                            {
+                                $checkOfficeOfClearanceCase[] = $row - 1;
+                                $errorCounter++;
+                            }
+
                             // Container Seal Number Validation Based on Mode of Transport
                             if ($checkOfficeOfClearanceExists['offClrMode'] === "BY AIR")
                             {
@@ -917,6 +927,14 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "ErrMsg" => "Invalid Port",
                                     "Column" => "Port",
                                     "Rows" => implode(", " ,$checkOfficeOfClearance)
+                                );
+            }
+
+            if(!empty($checkOfficeOfClearanceCase)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Port code casing does not match master data",
+                                    "Column" => "Port",
+                                    "Rows" => implode(", " ,$checkOfficeOfClearanceCase)
                                 );
             }
             
