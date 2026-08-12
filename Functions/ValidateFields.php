@@ -97,7 +97,7 @@ class ValidateFields extends DBConnection{
     }
 
     public function match_manifestFormat($manifest){
-        if(preg_match('/^[A-Z]{3}[0-9]{4}-[0-9]{2}$/i', $manifest)) { 
+        if(preg_match('/^[A-Z]{3}[0-9]{4}-[0-9]{2}$/', $manifest)) { 
             return true;
         }
         return false;
