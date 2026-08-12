@@ -24,6 +24,14 @@ $_POST = array_change_key_case($_POST, CASE_LOWER);
 /* 1. GET TOKEN (VERY IMPORTANT) */
 $token = $_SESSION['current_flow_token'];
 
+if (!isset($_SESSION['flows'][$token])) {
+    echo "<script>
+            alert('Session expired or unauthorized access. Please restart from the main menu.');
+            window.location.href='http://testweb.intercommerce.com.ph/webcws/login_menu.asp';
+          </script>";
+    exit;
+}
+
 /* 2. LOAD DATA FOR THIS TAB ONLY */
 $flow = $_SESSION['flows'][$token];
 

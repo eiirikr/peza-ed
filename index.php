@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-$_POST = array_change_key_case($_POST, CASE_LOWER);
+include_once('Functions/DBConnection.php');
+$conn = new DBConnection();
 
 $token = '';
 
@@ -13,6 +14,14 @@ if (isset($_POST['flow_token'])) {
     $token = $_SESSION['current_flow_token'];
 }
 
+if (empty($token)) {
+    echo "<script>
+            alert('Unauthorized access. Please log in through the system.');
+            window.location.href='http://testweb.intercommerce.com.ph/webcws/login_menu.asp';
+          </script>";
+    exit;
+}
+
 /* SAVE TOKEN */
 $_SESSION['current_flow_token'] = $token;
 
@@ -21,32 +30,40 @@ if (!isset($_SESSION['flows'])) {
     $_SESSION['flows'] = array();
 }
 
-/* store per token */
-if (
-    isset($_POST['csncod']) &&
-    !isset($_SESSION['flows'][$token])
-) {
+/* look up flow data server-side — never trust $_POST identity fields */
+if (!isset($_SESSION['flows'][$token])) {
+
+    $stmt = $conn->connectIPPEZA()->prepare(
+        "SELECT * FROM tblPHPFlowHandoff WHERE FlowToken = :token AND ExpiresAt > GETDATE()"
+    );
+    $stmt->execute([':token' => $token]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$row) {
+        echo "<script>
+                alert('Session expired or unauthorized access. Please restart from the main menu.');
+                window.location.href='http://testweb.intercommerce.com.ph/webcws/login_menu.asp';
+              </script>";
+        exit;
+    }
 
     $_SESSION['flows'][$token] = array(
-        'csncod'         => isset($_POST['csncod']) ? $_POST['csncod'] : '',
-        'loctin'         => isset($_POST['loctin']) ? $_POST['loctin'] : '',
-        'zonecode'       => isset($_POST['zonecode']) ? $_POST['zonecode'] : '',
-        'ptopstin'       => isset($_POST['ptops_tin']) ? $_POST['ptops_tin'] : '',
-        'enterprisetype' => isset($_POST['enterprisetype']) ? $_POST['enterprisetype'] : '',
-        'compnam'        => isset($_POST['compnam']) ? $_POST['compnam'] : '',
-        'userid'         => isset($_POST['userid']) ? $_POST['userid'] : '',
-        'lstexporter'    => isset($_POST['lstexporter']) ? $_POST['lstexporter'] : '',
-        'locbroktin'     => isset($_POST['locbroktin']) ? $_POST['locbroktin'] : '',
-        'loccod'         => isset($_POST['loccod']) ? $_POST['loccod'] : '',
-        'allaccids'      => isset($_POST['allaccids']) ? $_POST['allaccids'] : '',
-        'mod_cod'        => isset($_POST['mod_cod']) ? $_POST['mod_cod'] : '',
-        'mod_cod2'       => isset($_POST['mod_cod2']) ? $_POST['mod_cod2'] : '',
-        'cltcode'        => isset($_POST['cltcode']) ? $_POST['cltcode'] : '',
-        'redirection'    => isset($_POST['redirection']) ? $_POST['redirection'] : ''
+        'csncod'         => $row['CsnCod'],
+        'loctin'         => $row['LocTin'],
+        'zonecode'       => $row['ZoneCode'],
+        'ptopstin'       => $row['PTOPS_TIN'],
+        'enterprisetype' => $row['EnterpriseType'],
+        'compnam'        => $row['CompNam'],
+        'userid'         => $row['UserID'],
+        'lstexporter'    => $row['LstExporter'],
+        'locbroktin'     => $row['LocBrokTin'],
+        'loccod'         => $row['LocCod'],
+        'allaccids'      => $row['AllAccIds'],
+        'mod_cod'        => $row['ModCod'],
+        'mod_cod2'       => $row['ModCod2'],
+        'cltcode'        => $row['CltCode'],
+        'redirection'    => $row['Redirection']
     );
-
-    header("Location: index.php?token=" . $token);
-    exit;
 }
 
 if ( isset($_GET['msg']) && $_GET['msg'] == 'error' )
