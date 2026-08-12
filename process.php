@@ -26,8 +26,8 @@ $token = $_SESSION['current_flow_token'];
 
 if (!isset($_SESSION['flows'][$token])) {
     echo "<script>
-            alert('Session expired or unauthorized access. Please restart from the main menu.');
-            window.location.href='http://testweb.intercommerce.com.ph/webcws/login_menu.asp';
+            alert('Your session has expired. Please log in again to continue.');
+            window.location.href='http://testweb.intercommerce.com.ph/login.asp';
           </script>";
     exit;
 }

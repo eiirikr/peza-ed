@@ -213,6 +213,10 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidLocationOfGoods($val){
 
+        if ($val !== strtoupper($val)) {
+            return false;
+        }
+
         $sql    = "SELECT TOP 1 SHD_COD FROM dbo.GBSHDTAB_D WHERE SHD_COD = '$val'";
         $stmt   = $this->connect()->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_OBJ);
