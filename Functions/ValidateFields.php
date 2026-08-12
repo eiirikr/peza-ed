@@ -235,6 +235,10 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidCountryOfDestination($val){
 
+        if ($val !== strtoupper($val)) {
+            return false;
+        }
+
         $sql    = "SELECT TOP 1 cityCode FROM DmCityOrigin WHERE cityCode = '$val'";
         $stmt   = $this->connect()->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -244,6 +248,10 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidPortOfLoading($val){
 
+        if ($val !== strtoupper($val)) {
+            return false;
+        }
+
         $sql    = "SELECT TOP 1 loc_cod FROM GBLOCTAB where loc_cod = '$val'";
         $stmt   = $this->connect()->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -252,6 +260,10 @@ class ValidateFields extends DBConnection{
     }
 
     public function __checkValidPortOfDeparture($val){
+
+        if ($val !== strtoupper($val)) {
+            return null;
+        }
 
         $sql    = "SELECT TOP 1 offClrCod, offClrMode FROM DmOffClr where offClrCod = '$val'";
         $stmt   = $this->connect()->query($sql);
