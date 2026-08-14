@@ -459,6 +459,10 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidTermsOfDelivery($val){
 
+        if ($val !== strtoupper($val)) {
+            return false;
+        }
+
         $sql    = "SELECT Distinct (tod_dsc), tod_cod FROM GBTODTAB WHERE tod_cod = '$val' ORDER BY tod_dsc ASC";
         $stmt   = $this->connect()->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -467,6 +471,10 @@ class ValidateFields extends DBConnection{
     }
 
     public function __checkValidTermsOfPayment($val){
+
+        if ($val !== strtoupper($val)) {
+            return false;
+        }
 
         $sql    = "SELECT top_cod FROM GBTOPTAB WHERE top_cod = '$val' ORDER BY top_cod ASC";
         $stmt   = $this->connect()->query($sql);
