@@ -537,23 +537,33 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     else 
                     {
                         //ContainerNumber
-                        if( $validateFunc->max_length($ContainerNumber, 100) ) 
+                        if( empty($ContainerNumber) )
+                        {
+                            $containerNumberRequired[] = $row - 1;
+                            $errorCounter++;
+                        }
+                        else if( $validateFunc->max_length($ContainerNumber, 100) ) 
                         { 
                             $containerNumber[] = $row - 1; 
                             $errorCounter1++; 
                         }
-                        if( !empty($ContainerNumber) &&  ($validateFunc->match_char($ContainerNumber)) == 0 ) 
+                        else if( ($validateFunc->match_alphanum($ContainerNumber)) == 0 ) 
                         { 
                             $containerNumberMatch[] = $row - 1; 
                             $errorCounter++; 
                         }
 
                         //SealNumber
-                        if( $validateFunc->max_length($SealNumber, 100) ) 
+                        if( empty($SealNumber) )
+                        {
+                            $sealNumberRequired[] = $row - 1;
+                            $errorCounter++;
+                        }
+                        else if( $validateFunc->max_length($SealNumber, 100) ) 
                         { 
                             $sealNumber[] = $row - 1; $errorCounter1++; 
                         }
-                        if( !empty($SealNumber) && ($validateFunc->match_char($SealNumber)) == 0 )
+                        else if( ($validateFunc->match_alphanum($SealNumber)) == 0 )
                         {
                             $sealNumberMatch[] = $row - 1; 
                             $errorCounter++; 
@@ -1128,6 +1138,9 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             // If the mode of transport is by sea then validate it
             if (empty($checkModeOfTransportation))
             {
+                if(!empty($containerNumberRequired)){
+                    $errorLists[] = array("ErrMsg" => "Container Number is required", "Column" => "Container Number", "Rows" => implode(", ", $containerNumberRequired));
+                }
                 if(!empty($containerNumber)){
                     $errorLists[] = array(
                                         "ErrMsg" => "Exceeds the max characters allowed (100)",
@@ -1137,12 +1150,15 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 }
                 if(!empty($containerNumberMatch)){
                     $errorLists[] = array(
-                                        "ErrMsg" => "Only accept letters, numbers and few special characters (-_.,:;#$%()*/) - Required",
+                                        "ErrMsg" => "Only letters and numbers are allowed - no special characters",
                                         "Column" => "Container Number",
                                         "Rows" => implode(", " ,$containerNumberMatch)
                                     );
                 }
 
+                if(!empty($sealNumberRequired)){
+                    $errorLists[] = array("ErrMsg" => "Seal Number is required", "Column" => "Seal Number", "Rows" => implode(", ", $sealNumberRequired));
+                }
                 if(!empty($sealNumber)){
                     $errorLists[] = array(
                                         "ErrMsg" => "Exceeds the max characters allowed (100)",
@@ -1152,7 +1168,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 }
                 if(!empty($sealNumberMatch)){
                     $errorLists[] = array(
-                                        "ErrMsg" => "Only accept letters, numbers and few special characters (-_.,:;#$%()*/) - Required",
+                                        "ErrMsg" => "Only letters and numbers are allowed - no special characters",
                                         "Column" => "Seal Number",
                                         "Rows" => implode(", " ,$sealNumberMatch)
                                     );
