@@ -828,7 +828,17 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //ItemInvoiceValue
-                    if( !empty($ItemInvoiceValue) && ($validateFunc->match_amount($ItemInvoiceValue)) == 0 )
+                    if( empty($ItemInvoiceValue) )
+                    {
+                        $itemInvoiceValueRequired[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else if( $validateFunc->max_length($ItemInvoiceValue, 11) )
+                    {
+                        $itemInvoiceValueLength[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else if( !$validateFunc->match_weightFormat($ItemInvoiceValue) || (float)$ItemInvoiceValue <= 0 )
                     {
                         $itemInvoiceValueMatch[] = $row - 1; 
                         $errorCounter++; 
@@ -1359,10 +1369,16 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
 
             //ItemInvoiceValue
+            if(!empty($itemInvoiceValueRequired)){
+                $errorLists[] = array("ErrMsg" => "Item Invoice Value is required", "Column" => "Item Invoice Value", "Rows" => implode(", ", $itemInvoiceValueRequired));
+            }
+            if(!empty($itemInvoiceValueLength)){
+                $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (11)", "Column" => "Item Invoice Value", "Rows" => implode(", ", $itemInvoiceValueLength));
+            }
             if(!empty($itemInvoiceValueMatch)){ 
                 $errorLists[] = array(
                                     "ErrMsg" => "Invalid entry (e.g. 1000.00) - Required",
-                                    "Column" => "Invoice Number",
+                                    "Column" => "Item Invoice Value",
                                     "Rows" => implode(", " ,$itemInvoiceValueMatch)
                                 );
             }
@@ -1645,7 +1661,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
 
                 $ItemGrossWeight    = ($ItemGrossWeight === '') ? '' : $validateFunc->truncateDecimal(str_replace(',', '', $ItemGrossWeight), 2);
                 $ItemNetWeight      = ($ItemNetWeight === '') ? '' : $validateFunc->truncateDecimal(str_replace(',', '', $ItemNetWeight), 2);
-                $ItemInvoiceValue   = number_format((float)str_replace(',', '', $ItemInvoiceValue), 2, '.', '');
+                $ItemInvoiceValue = $validateFunc->truncateDecimal(str_replace(',', '', $ItemInvoiceValue), 2);
                 
                 $ItemCode               = strtoupper($ItemCode);
                 $MarksAndNumber         = strtoupper($MarksAndNumber);
