@@ -243,15 +243,6 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                             $errorCounter++; 
                         } else {
 
-                            // Case-sensitive check: DB match is case-insensitive by default,
-                            // so confirm the Excel value's casing exactly matches offClrCod
-                            // as stored in DmOffClr.
-                            if ( strcmp($Port, $checkOfficeOfClearanceExists['offClrCod']) !== 0 )
-                            {
-                                $checkOfficeOfClearanceCase[] = $row - 1;
-                                $errorCounter++;
-                            }
-
                             // Container Seal Number Validation Based on Mode of Transport
                             if ($checkOfficeOfClearanceExists['offClrMode'] === "BY AIR")
                             {
@@ -1023,14 +1014,6 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Rows" => implode(", " ,$checkOfficeOfClearance)
                                 );
             }
-
-            if(!empty($checkOfficeOfClearanceCase)){
-                $errorLists[] = array(
-                                    "ErrMsg" => "Port code casing does not match master data",
-                                    "Column" => "Port",
-                                    "Rows" => implode(", " ,$checkOfficeOfClearanceCase)
-                                );
-            }
             
             //PurposeOfExportation
             if(!empty($checkPurposeOfExportation)){
@@ -1502,6 +1485,10 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 }
                 // ----------------- END CONSIGNEE ADDRESS ----------------- //
                 
+                $Port                 = strtoupper(trim($Port));
+                $LocationOfGoods      = strtoupper(trim($LocationOfGoods));
+                $CountryOfDestination = strtoupper(trim($CountryOfDestination));
+                $PortOfLoading        = strtoupper(trim($PortOfLoading));
                 $modeofTransport = $lookupData->getModeofTransport($conn, $Port);
                 
                 // Prepare and execute insert

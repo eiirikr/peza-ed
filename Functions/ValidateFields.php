@@ -230,9 +230,7 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidLocationOfGoods($val){
 
-        if ($val !== strtoupper($val)) {
-            return false;
-        }
+        $val = strtoupper(trim($val));
 
         $sql    = "SELECT TOP 1 SHD_COD FROM dbo.GBSHDTAB_D WHERE SHD_COD = '$val'";
         $stmt   = $this->connect()->query($sql);
@@ -252,9 +250,7 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidCountryOfDestination($val){
 
-        if ($val !== strtoupper($val)) {
-            return false;
-        }
+        $val = strtoupper(trim($val));
 
         $sql    = "SELECT TOP 1 cityCode FROM DmCityOrigin WHERE cityCode = '$val'";
         $stmt   = $this->connect()->query($sql);
@@ -265,9 +261,7 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidPortOfLoading($val){
 
-        if ($val !== strtoupper($val)) {
-            return false;
-        }
+        $val = strtoupper(trim($val));
 
         $sql    = "SELECT TOP 1 loc_cod FROM GBLOCTAB where loc_cod = '$val'";
         $stmt   = $this->connect()->query($sql);
@@ -278,9 +272,7 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidPortOfDeparture($val){
 
-        if ($val !== strtoupper($val)) {
-            return null;
-        }
+        $val = strtoupper(trim($val));
 
         $sql    = "SELECT TOP 1 offClrCod, offClrMode FROM DmOffClr where offClrCod = '$val'";
         $stmt   = $this->connect()->query($sql);
@@ -459,9 +451,7 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidTermsOfDelivery($val){
 
-        if ($val !== strtoupper($val)) {
-            return false;
-        }
+        $val = strtoupper(trim($val));
 
         $sql    = "SELECT Distinct (tod_dsc), tod_cod FROM GBTODTAB WHERE tod_cod = '$val' ORDER BY tod_dsc ASC";
         $stmt   = $this->connect()->query($sql);
@@ -472,9 +462,7 @@ class ValidateFields extends DBConnection{
 
     public function __checkValidTermsOfPayment($val){
 
-        if ($val !== strtoupper($val)) {
-            return false;
-        }
+        $val = strtoupper(trim($val));
 
         $sql    = "SELECT top_cod FROM GBTOPTAB WHERE top_cod = '$val' ORDER BY top_cod ASC";
         $stmt   = $this->connect()->query($sql);
