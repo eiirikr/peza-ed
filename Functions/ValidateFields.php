@@ -90,6 +90,23 @@ class ValidateFields extends DBConnection{
         }
     }
 
+    public function match_weightFormat($itemCol){
+        if(preg_match("/^\d+(\.\d+)?$/", $itemCol)){
+            return true;
+        }
+        return false;
+    }
+
+    public function truncateDecimal($value, $decimals = 2){
+        $value = (string) $value;
+        if (strpos($value, '.') === false) {
+            return $value;
+        }
+        list($intPart, $decPart) = explode('.', $value, 2);
+        $decPart = substr($decPart, 0, $decimals);
+        return $decPart === '' ? $intPart : $intPart . '.' . $decPart;
+    }
+
     public function max_length($itemCol, $maxlength){
         if(strlen($itemCol) > $maxlength) { 
             return true;

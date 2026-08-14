@@ -793,17 +793,38 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //ItemGrossWeight
-                    if( !empty($ItemGrossWeight) && ($validateFunc->match_amount($ItemGrossWeight)) == 0 )
+                    if( !empty($ItemGrossWeight) )
                     {
-                        $itemGrossWeightMatch[] = $row - 1; 
-                        $errorCounter++; 
+                        if( $validateFunc->max_length($ItemGrossWeight, 10) )
+                        {
+                            $itemGrossWeightLength[] = $row - 1;
+                            $errorCounter++;
+                        }
+                        else if( !$validateFunc->match_weightFormat($ItemGrossWeight) || (float)$ItemGrossWeight <= 0 )
+                        {
+                            $itemGrossWeightMatch[] = $row - 1; 
+                            $errorCounter++; 
+                        }
                     }
 
                     //ItemNetWeight
-                    if( !empty($ItemNetWeight) && ($validateFunc->match_amount($ItemNetWeight)) == 0 )
+                    if( !empty($ItemNetWeight) )
                     {
-                        $itemNetWeightMatch[] = $row - 1; 
-                        $errorCounter++; 
+                        if( $validateFunc->max_length($ItemNetWeight, 10) )
+                        {
+                            $itemNetWeightLength[] = $row - 1;
+                            $errorCounter++;
+                        }
+                        else if( !$validateFunc->match_weightFormat($ItemNetWeight) || (float)$ItemNetWeight <= 0 )
+                        {
+                            $itemNetWeightMatch[] = $row - 1; 
+                            $errorCounter++; 
+                        }
+                        else if( !empty($ItemGrossWeight) && $validateFunc->match_weightFormat($ItemGrossWeight) && (float)$ItemNetWeight > (float)$ItemGrossWeight )
+                        {
+                            $itemNetExceedsGross[] = $row - 1;
+                            $errorCounter++;
+                        }
                     }
 
                     //ItemInvoiceValue
@@ -1300,6 +1321,10 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                 );
             }
 
+            if(!empty($itemGrossWeightLength)){
+                $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (10)", "Column" => "Item Gross Weight", "Rows" => implode(", ", $itemGrossWeightLength));
+            }
+
             //ItemNetWeight
             if(!empty($itemNetWeightMatch)){ 
                 $errorLists[] = array(
@@ -1307,6 +1332,14 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Column" => "Item Net Weight",
                                     "Rows" => implode(", " ,$itemNetWeightMatch)
                                 );
+            }
+
+            if(!empty($itemNetWeightLength)){
+                $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (10)", "Column" => "Item Net Weight", "Rows" => implode(", ", $itemNetWeightLength));
+            }
+
+            if(!empty($itemNetExceedsGross)){
+                $errorLists[] = array("ErrMsg" => "Item Net Weight must not exceed Item Gross Weight", "Column" => "Item Net Weight", "Rows" => implode(", ", $itemNetExceedsGross));
             }
 
             //AIRBILLNO
@@ -1610,8 +1643,8 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 $ProcDesc               = $ProcedureCode;  
                 $CoCode                 = 'PH';
 
-                $ItemGrossWeight    = number_format((float)str_replace(',', '', $ItemGrossWeight), 2, '.', '');
-                $ItemNetWeight      = number_format((float)str_replace(',', '', $ItemNetWeight), 2, '.', '');
+                $ItemGrossWeight    = ($ItemGrossWeight === '') ? '' : $validateFunc->truncateDecimal(str_replace(',', '', $ItemGrossWeight), 2);
+                $ItemNetWeight      = ($ItemNetWeight === '') ? '' : $validateFunc->truncateDecimal(str_replace(',', '', $ItemNetWeight), 2);
                 $ItemInvoiceValue   = number_format((float)str_replace(',', '', $ItemInvoiceValue), 2, '.', '');
                 
                 $ItemCode               = strtoupper($ItemCode);
@@ -1664,8 +1697,8 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         ':supval1'         => $SuplementaryValue,
                         ':procedure'       => $ProcedureCode,
                         ':extcode'         => $ExtendedCode,
-                        ':itemgrossweight' => $ItemGrossWeight,
-                        ':itemnetweight'   => $ItemNetWeight,
+                        ':itemgrossweight' => ($ItemGrossWeight === '') ? null : $ItemGrossWeight,
+                        ':itemnetweight'   => ($ItemNetWeight === '') ? null : $ItemNetWeight,
                         ':iteminvoicevalue'=> $ItemInvoiceValue,
                         ':quo_cod'               => $quo_cod,
                         ':quo_dsc'               => $quo_dsc,
