@@ -294,9 +294,13 @@ class ValidateFields extends DBConnection{
             "SALE"
         ];
 
-        return (count(array_filter($result, function($item) use ($val){
-            return strtoupper(trim($item)) == strtoupper(trim($val));
-        })) > 0 ? true : false);
+        foreach ($result as $item) {
+            if (strtoupper(trim($item)) == strtoupper(trim($val))) {
+                return $item;
+            }
+        }
+
+        return false;
     }
 
     public function __checkValidContainerSize($val){

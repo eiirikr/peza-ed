@@ -1489,6 +1489,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 $LocationOfGoods      = strtoupper(trim($LocationOfGoods));
                 $CountryOfDestination = strtoupper(trim($CountryOfDestination));
                 $PortOfLoading        = strtoupper(trim($PortOfLoading));
+                $PurposeOfExportation = strtoupper(trim($PurposeOfExportation));
                 $modeofTransport = $lookupData->getModeofTransport($conn, $Port);
                 
                 // Prepare and execute insert
