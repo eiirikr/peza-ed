@@ -756,22 +756,40 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $errorCounter++; 
                     }
 
-                    //procedureCode
-                    if( $validateFunc->max_length($ProcedureCode, 6) ) 
-                    { 
-                        $cOO[] = $row - 1; $errorCounter1++; 
-                    }
-                    if( !empty($ProcedureCode) && ($validateFunc->match_numbers($ProcedureCode)) == 0 )
-                    {
-                        $cOOMatch[] = $row - 1; 
-                        $errorCounter++; 
+                    //ProcedureCode
+                    if( !empty($ProcedureCode) ) {
+
+                        //CHECK ProcedureCode IF EXISTS
+                        $checkProcedureCodeExists = $validateFunc->__checkValidNatlCode($ProcedureCode);
+
+                        if( !$checkProcedureCodeExists )
+                        {
+                            $checkProcedureCode[] = $row - 1;
+                            $errorCounter++;
+                        }
+
+                    } else {
+
+                        $checkProcedureCode[] = $row - 1;
+                        $errorCounter++;
                     }
 
                     //ExtendedCode
-                    if( !empty($ExtendedCode) && ($ExtendedCode) !== "000" )
-                    {
-                        $checkExtCode[] = $row - 1; 
-                        $errorCounter++; 
+                    if( !empty($ExtendedCode) ) {
+
+                        //CHECK ExtendedCode IF EXISTS
+                        $checkExtendedCodeExists = $validateFunc->__checkValidExtCode($ExtendedCode);
+
+                        if( !$checkExtendedCodeExists )
+                        {
+                            $checkExtCode[] = $row - 1;
+                            $errorCounter++;
+                        }
+
+                    } else {
+
+                        $checkExtCode[] = $row - 1;
+                        $errorCounter++;
                     }
 
                     //ItemGrossWeight
@@ -1255,11 +1273,20 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                 );
             }
             
+            // ProcedureCode
+            if(!empty($checkProcedureCode)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Invalid or missing Procedure Code",
+                                    "Column" => "Procedure Code",
+                                    "Rows" => implode(", " ,$checkProcedureCode)
+                                );
+            }
+
             // ExtendedCode
             if(!empty($checkExtCode)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Invalid code for the Extended Code - Required",
-                                    "Column" => "EXTENDED CODE",
+                                    "ErrMsg" => "Invalid or missing Extended Code",
+                                    "Column" => "Extended Code",
                                     "Rows" => implode(", " ,$checkExtCode)
                                 );
             }
@@ -1268,7 +1295,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             if(!empty($itemGrossWeightMatch)){ 
                 $errorLists[] = array(
                                     "ErrMsg" => "Invalid entry (e.g. 0.00) - Required",
-                                    "Column" => "ITEM GROSS WEIGHT",
+                                    "Column" => "Item Gross Weight",
                                     "Rows" => implode(", " ,$itemGrossWeightMatch)
                                 );
             }
@@ -1277,7 +1304,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             if(!empty($itemNetWeightMatch)){ 
                 $errorLists[] = array(
                                     "ErrMsg" => "Invalid entry (e.g. 0.00) - Required",
-                                    "Column" => "ITEM NET WEIGHT",
+                                    "Column" => "Item Net Weight",
                                     "Rows" => implode(", " ,$itemNetWeightMatch)
                                 );
             }
@@ -1286,14 +1313,14 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             if(!empty($airbillNo)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Exceeds the max characters allowed (26)",
-                                    "Column" => "AIRBILL/BL NUMBER",
+                                    "Column" => "Airbill/BL Number",
                                     "Rows" => implode(", " ,$airbillNo)
                                 );
             }
             if(!empty($airbillNoMatch)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Only accept letters and numbers - Required",
-                                    "Column" => "AIRBILL/BL NUMBER",
+                                    "Column" => "Airbill/BL Number",
                                     "Rows" => implode(", " ,$airbillNoMatch)
                                 );
             }
@@ -1302,7 +1329,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             if(!empty($itemInvoiceValueMatch)){ 
                 $errorLists[] = array(
                                     "ErrMsg" => "Invalid entry (e.g. 1000.00) - Required",
-                                    "Column" => "INVOICE NUMBER",
+                                    "Column" => "Invoice Number",
                                     "Rows" => implode(", " ,$itemInvoiceValueMatch)
                                 );
             }
@@ -1313,7 +1340,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             if(!empty($termsOfDelivery)){ 
                 $errorLists[] = array(
                                     "ErrMsg" => "Invalid Term of Delivery - Required",
-                                    "Column" => "TERMS OF DELIVERY",
+                                    "Column" => "Terms Of Delivery",
                                     "Rows" => implode(", " ,$termsOfDelivery)
                                 );
             }  
@@ -1322,7 +1349,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             if(!empty($termsOfPayment)){ 
                 $errorLists[] = array(
                                     "ErrMsg" => "Invalid Term of Payment - Required",
-                                    "Column" => "TERMS OF DELIVERY",
+                                    "Column" => "Terms Of Delivery",
                                     "Rows" => implode(", " ,$termsOfPayment)
                                 );
             }
@@ -1540,6 +1567,9 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     $ItemCode              =   $validateFunc->trim_val($dataRow3[$row3]['A']);
                     
                     $checkItemCodeExists = $validateFunc->__checkItemCode($ItemCode, $allaccids, $accountType);
+
+                    $goodsdesc1             = $checkItemCodeExists['commodityDesc'];
+                    $HSCode                 = $checkItemCodeExists['HsCode'];
                     
                     $isRegulated = "";
                     if ($checkItemCodeExists['status'] == "M") {
@@ -1576,8 +1606,8 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 $Ocharges               = '0';
                 $IFreight               = '0';
                 $InvCurr                = 'USD';
-                $Pref                   = 'NONE';   
-                $ProcDesc               = '1000';
+                $Pref                   = 'NONE';  
+                $ProcDesc               = $ProcedureCode;  
                 $CoCode                 = 'PH';
 
                 $ItemGrossWeight    = number_format((float)str_replace(',', '', $ItemGrossWeight), 2, '.', '');
