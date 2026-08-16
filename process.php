@@ -696,19 +696,19 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     
 
                     //MarksAndNumber
-                    if( $validateFunc->max_length($MarksAndNumber, 70) ) 
-                    { 
-                        $marksAndNumber[] = $row - 1; $errorCounter1++; 
-                    }
-                    if( !empty($MarksAndNumber) ) 
+                    if( empty($MarksAndNumber) )
                     {
-                        if ( ($validateFunc->match_char($MarksAndNumber)) == 0 ) 
-                        {
-                            $marksAndNumberMatch[] = $row - 1; 
-                            $errorCounter++; 
-                        }
-                    } else {
                         $marksAndNumberMatch[] = $row - 1; 
+                        $errorCounter++; 
+                    }
+                    else if( $validateFunc->max_length($MarksAndNumber, 70) ) 
+                    { 
+                        $marksAndNumber[] = $row - 1; 
+                        $errorCounter1++; 
+                    }
+                    if( !empty($MarksAndNumber) && !preg_match('/^[A-Za-z0-9 ]+$/', $MarksAndNumber) )
+                    { 
+                        $marksAndNumberSpecialChar[] = $row - 1; 
                         $errorCounter++; 
                     }
 
@@ -1226,6 +1226,13 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             
             // MarksAndNumber
+            if(!empty($marksAndNumberMatch)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Marks and Number is required",
+                                    "Column" => "Marks and Number",
+                                    "Rows" => implode(", " ,$marksAndNumberMatch)
+                                );
+            }
             if(!empty($marksAndNumber)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Exceeds the max characters allowed (70)",
@@ -1233,11 +1240,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Rows" => implode(", " ,$marksAndNumber)
                                 );
             }
-            if(!empty($marksAndNumberMatch)){
+            if(!empty($marksAndNumberSpecialChar)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Only accept letters, numbers and few special characters (-_.,:;#$%()*/) - Required",
+                                    "ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters",
                                     "Column" => "Marks and Number",
-                                    "Rows" => implode(", " ,$marksAndNumberMatch)
+                                    "Rows" => implode(", " ,$marksAndNumberSpecialChar)
                                 );
             }
             
