@@ -359,11 +359,17 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
                     
                     //VesselAircraft
-                    if( $validateFunc->max_length($VesselAircraft, 27) ) 
-                    { 
-                        $vesselAircraft[] = $row - 1; $errorCounter1++; 
+                    if( empty($VesselAircraft) )
+                    {
+                        $vesselAircraftRequired[] = $row - 1;
+                        $errorCounter++;
                     }
-                    if( !empty($VesselAircraft) && ($validateFunc->match_char($VesselAircraft)) == 0 )
+                    else if( $validateFunc->max_length($VesselAircraft, 27) ) 
+                    { 
+                        $vesselAircraft[] = $row - 1; 
+                        $errorCounter++; 
+                    }
+                    if( !empty($VesselAircraft) && !preg_match('/^[A-Za-z0-9 ]+$/', $VesselAircraft) )
                     { 
                         $vesselAircraftMatch[] = $row - 1; 
                         $errorCounter++; 
@@ -1070,6 +1076,13 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }            
             
             //VesselAircraft
+            if(!empty($vesselAircraftRequired)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Vessel/Aircraft is required",
+                                    "Column" => "Vessel / Aircraft",
+                                    "Rows" => implode(", " ,$vesselAircraftRequired)
+                                );
+            }
             if(!empty($vesselAircraft)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Exceeds the max characters allowed (27)",
@@ -1079,7 +1092,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             if(!empty($vesselAircraftMatch)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Only accept letters, numbers and few special characters (-_.,:;#$%()*/) - Required",
+                                    "ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters",
                                     "Column" => "Vessel / Aircraft",
                                     "Rows" => implode(", " ,$vesselAircraftMatch)
                                 );
