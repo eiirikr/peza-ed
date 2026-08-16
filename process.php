@@ -770,10 +770,18 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //SuplementaryValue
-                    if( !empty($SuplementaryValue) && ($validateFunc->match_numbers($SuplementaryValue)) == 0 )
+                    if( !empty($SuplementaryValue) )
                     {
-                        $suplementaryValueMatch[] = $row - 1; 
-                        $errorCounter++; 
+                        if( $validateFunc->max_length($SuplementaryValue, 15) )
+                        {
+                            $suplementaryValueLength[] = $row - 1;
+                            $errorCounter++;
+                        }
+                        else if( ($validateFunc->match_numbers($SuplementaryValue)) == 0 )
+                        {
+                            $suplementaryValueMatch[] = $row - 1; 
+                            $errorCounter++; 
+                        }
                     }
 
                     //ProcedureCode
@@ -1311,9 +1319,16 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             
             // SuplementaryValue
+            if(!empty($suplementaryValueLength)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Exceeds the max characters allowed (15)",
+                                    "Column" => "Supplementary Value",
+                                    "Rows" => implode(", " ,$suplementaryValueLength)
+                                );
+            }
             if(!empty($suplementaryValueMatch)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Only accept whole numbers",
+                                    "ErrMsg" => "Invalid format. Only whole numbers are allowed - decimals and scientific notation (e.g. 1E+10) are not accepted",
                                     "Column" => "Supplementary Value",
                                     "Rows" => implode(", " ,$suplementaryValueMatch)
                                 );
