@@ -278,9 +278,15 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //BillOfLading
-                    if( $validateFunc->max_length($BillOfLading, 52) ) 
+                    if( empty($BillOfLading) )
+                    {
+                        $billOfLadingRequired[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else if( $validateFunc->max_length($BillOfLading, 26) ) 
                     { 
-                        $billOfLading[] = $row - 1; $errorCounter1++; 
+                        $billOfLading[] = $row - 1; 
+                        $errorCounter++; 
                     }
                     if( !empty($BillOfLading) && ($validateFunc->match_alphanum($BillOfLading)) == 0 )
                     { 
@@ -1034,9 +1040,16 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             
             //BillOfLading
+            if(!empty($billOfLadingRequired)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Bill of Lading/Airbill is required",
+                                    "Column" => "Bill of Lading",
+                                    "Rows" => implode(", " ,$billOfLadingRequired)
+                                );
+            }
             if(!empty($billOfLading)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Exceeds the max characters allowed (52)",
+                                    "ErrMsg" => "Exceeds the max characters allowed (26)",
                                     "Column" => "Bill of Lading",
                                     "Rows" => implode(", " ,$billOfLading)
                                 );
@@ -1047,7 +1060,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Column" => "Bill of Lading",
                                     "Rows" => implode(", " ,$billOfLadingMatch)
                                 );
-            }            
+            }       
             if(!empty($billOfLadingInvalid)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Please enter a valid bill of lading/airway bill.",
