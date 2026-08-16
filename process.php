@@ -573,19 +573,20 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         }
 
                         //ContainerSize
-                        if( !empty($ContainerSize) )
+                        if( empty($ContainerSize) )
+                        {
+                            $containerSizeRequired[] = $row - 1;
+                            $errorCounter++;
+                        }
+                        else 
                         { 
-                            //CHECK ContainerSize IF EXISTS
-                            $checkContainerSizeExists = $validateFunc->__checkValidContainerSize($ContainerSize); //MODIFY
+                            $checkContainerSizeExists = $validateFunc->__checkValidContainerSize($ContainerSize);
 
                             if( !$checkContainerSizeExists ) 
                             {
                                 $checkContainerSize[] = $row - 1; 
                                 $errorCounter++; 
                             }
-                        } else {
-                            $checkContainerSize[] = $row - 1; 
-                            $errorCounter++; 
                         }
                     }
             }
@@ -1183,12 +1184,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     );
                 }
 
+                if(!empty($containerSizeRequired)){
+                    $errorLists[] = array("ErrMsg" => "Container Size is required", "Column" => "Container Size", "Rows" => implode(", ", $containerSizeRequired));
+                }
                 if(!empty($checkContainerSize)){
-                    $errorLists[] = array(
-                                        "ErrMsg" => "Invalid Container Size",
-                                        "Column" => "Container Size",
-                                        "Rows" => implode(", " ,$checkContainerSize)
-                                    );
+                    $errorLists[] = array("ErrMsg" => "Invalid Container Size", "Column" => "Container Size", "Rows" => implode(", ", $checkContainerSize));
                 }
             } else {
                 if(!empty($containerDetailsNotAllowed)){
