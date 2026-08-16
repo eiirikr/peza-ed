@@ -753,11 +753,17 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //InvoiceNumber
-                    if( $validateFunc->max_length($InvoiceNumber, 300) ) 
-                    { 
-                        $invoiceNumber[] = $row - 1; $errorCounter1++; 
+                    if( empty($InvoiceNumber) )
+                    {
+                        $invoiceNumberRequired[] = $row - 1;
+                        $errorCounter++;
                     }
-                    if( !empty($InvoiceNumber) && ($validateFunc->match_char($InvoiceNumber)) == 0 )
+                    else if( $validateFunc->max_length($InvoiceNumber, 300) ) 
+                    { 
+                        $invoiceNumber[] = $row - 1; 
+                        $errorCounter1++; 
+                    }
+                    if( !empty($InvoiceNumber) && !preg_match('/^[A-Za-z0-9 ]+$/', $InvoiceNumber) )
                     {
                         $invoiceNumberMatch[] = $row - 1; 
                         $errorCounter++; 
@@ -1282,6 +1288,13 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             
             // InvoiceNumber
+            if(!empty($invoiceNumberRequired)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Invoice Number is required",
+                                    "Column" => "Invoice Number",
+                                    "Rows" => implode(", " ,$invoiceNumberRequired)
+                                );
+            }
             if(!empty($invoiceNumber)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Exceeds the max characters allowed (300)",
@@ -1291,7 +1304,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             if(!empty($invoiceNumberMatch)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Only accept letters and numbers - Required",
+                                    "ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters",
                                     "Column" => "Invoice Number",
                                     "Rows" => implode(", " ,$invoiceNumberMatch)
                                 );
