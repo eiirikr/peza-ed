@@ -176,9 +176,9 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $VesselAircraft         =   $validateFunc->trim_val2($dataRow[$row]['G']);
                         $LocationOfGoods        =   strtoupper($validateFunc->trim_val2($dataRow[$row]['H']));
                         $ProvinceOfOrigin       =   $validateFunc->trim_val2($dataRow[$row]['I']);
-                        $CountryOfDestination   =   $validateFunc->trim_val2($dataRow[$row]['J']);
-                        $PortOfLoading          =   $validateFunc->trim_val($dataRow[$row]['K']);
-                        $PortOfDeparture        =   $validateFunc->trim_val($dataRow[$row]['L']);
+                        $CountryOfDestination   =   strtoupper($validateFunc->trim_val2($dataRow[$row]['J']));
+                        $PortOfLoading          =   strtoupper($validateFunc->trim_val($dataRow[$row]['K']));
+                        $PortOfDeparture        =   strtoupper($validateFunc->trim_val($dataRow[$row]['L']));
                     }
 
                 /* VALIDATE FIELD VALUES */
