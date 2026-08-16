@@ -1253,12 +1253,12 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 $errorLists[] = array(
                                     "ErrMsg" => "Exceeds the max characters allowed (10)",
                                     "Column" => "Number of Package",
-                                    "Rows" => implode(", " ,$NumberOfPackage)
+                                    "Rows" => implode(", " ,$numberOfPackage)
                                 );
             }
             if(!empty($numberOfPackageMatch)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Only accept letters and numbers - Required",
+                                    "ErrMsg" => "Number of Package is required and must contain numbers only",
                                     "Column" => "Number of Package",
                                     "Rows" => implode(", " ,$numberOfPackageMatch)
                                 );
