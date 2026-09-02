@@ -150,16 +150,26 @@ if ( isset($_GET['msg']) && $_GET['msg'] == 'success' )
         <div class="row">
             <div class="col-md-12" align="center">
                 <div class="form-group col-md-2">
-                    <?php 
-						if ( isset($_GET['msg']) && $_GET['msg'] == 'error' ) 
-						{
-							echo "<a href='http://testweb.intercommerce.com.ph/BULK-ITEMUPLOAD/IMPORT/index.php?applno={$applNo}&status={$stats}' id='back' class='btn btn-default btn-sm btn-block'><< Back to page </a>";
-						}
-						else 
-						{
-							echo "<a href='http://testweb.intercommerce.com.ph/webcws/ptops_ed_step1PEZAEXPlocEXPRESS.asp' id='back' class='btn btn-default btn-sm btn-block'><< Back to page </a>";
-						}
-					?>
+                    <?php
+                        $redirection = isset($_SESSION['flows'][$token]['redirection'])
+                            ? $_SESSION['flows'][$token]['redirection']
+                            : '';
+
+                        $isExpress = (substr($redirection, -7) === 'EXPRESS');
+
+                        if ( isset($_GET['msg']) && $_GET['msg'] == 'error' )
+                        {
+                            echo "<a href='http://testweb.intercommerce.com.ph/BULK-ITEMUPLOAD/IMPORT/index.php?applno={$applNo}&status={$stats}' id='back' class='btn btn-default btn-sm btn-block'><< Back to page </a>";
+                        }
+                        elseif ( $isExpress )
+                        {
+                            echo "<a href='http://testweb.intercommerce.com.ph/webcws/ptops_ed_step1PEZAEXPlocEXPRESS.asp' id='back' class='btn btn-default btn-sm btn-block'><< Back to page </a>";
+                        }
+                        else
+                        {
+                            echo "<a href='http://testweb.intercommerce.com.ph/webcws/ptops_ed_step1PEZAEXPloc.asp' id='back' class='btn btn-default btn-sm btn-block'><< Back to page </a>";
+                        }
+                    ?>
                 </div>
             </div>
         </div>
