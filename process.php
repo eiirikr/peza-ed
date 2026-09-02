@@ -647,6 +647,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $NumberOfPackage       =   $validateFunc->trim_val($dataRow[$row]['C']);
                         $PackageCode           =   $validateFunc->trim_val($dataRow[$row]['D']);
                         $InvoiceNumber         =   $validateFunc->trim_val($dataRow[$row]['E']);
+                        if (is_numeric($InvoiceNumber) && $validateFunc->is_scientific_notation($InvoiceNumber)) {
+                            $InvoiceNumber = sprintf('%.0f', (float) $InvoiceNumber);
+                        } elseif (isset($dataRow[$row]['E']) && is_float($dataRow[$row]['E'])) {
+                            $InvoiceNumber = sprintf('%.0f', $dataRow[$row]['E']);
+                        }
                         $SuplementaryValue     =   $validateFunc->trim_val($dataRow[$row]['F']);
                         $ProcedureCode         =   $validateFunc->trim_val($dataRow[$row]['G']);
                         $ExtendedCode          =   $validateFunc->trim_val($dataRow[$row]['H']);
@@ -753,14 +758,25 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //InvoiceNumber
-                    if( $validateFunc->max_length($InvoiceNumber, 300) ) 
-                    { 
-                        $invoiceNumber[] = $row - 1; $errorCounter1++; 
-                    }
-                    if( !empty($InvoiceNumber) && ($validateFunc->match_char($InvoiceNumber)) == 0 )
+                    if( empty($InvoiceNumber) )
                     {
-                        $invoiceNumberMatch[] = $row - 1; 
-                        $errorCounter++; 
+                        $invoiceNumberRequired[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else if( $validateFunc->is_scientific_notation($InvoiceNumber) )
+                    {
+                        $invoiceNumberScientific[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else if( $validateFunc->max_length($InvoiceNumber, 300) )
+                    {
+                        $invoiceNumber[] = $row - 1;
+                        $errorCounter1++;
+                    }
+                    else if( ($validateFunc->match_alphanum($InvoiceNumber)) == 0 )
+                    {
+                        $invoiceNumberMatch[] = $row - 1;
+                        $errorCounter++;
                     }
 
                     //SuplementaryValue
@@ -1290,6 +1306,20 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             
             // InvoiceNumber
+            if(!empty($invoiceNumberRequired)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Invoice Number is required",
+                                    "Column" => "Invoice Number",
+                                    "Rows" => implode(", " ,$invoiceNumberRequired)
+                                );
+            }
+            if(!empty($invoiceNumberScientific)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Invalid format: Value was converted to scientific notation by Excel; format the Invoice Number column as Text and re-enter",
+                                    "Column" => "Invoice Number",
+                                    "Rows" => implode(", " ,$invoiceNumberScientific)
+                                );
+            }
             if(!empty($invoiceNumber)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Exceeds the max characters allowed (300)",
@@ -1299,7 +1329,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             if(!empty($invoiceNumberMatch)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters",
+                                    "ErrMsg" => "Only letters and numbers are allowed, no special characters",
                                     "Column" => "Invoice Number",
                                     "Rows" => implode(", " ,$invoiceNumberMatch)
                                 );
@@ -1690,6 +1720,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     $NumberOfPackage       =   $validateFunc->trim_val($dataRow3[$row3]['C']);
                     $PackageCode           =   $validateFunc->trim_val($dataRow3[$row3]['D']);
                     $InvoiceNumber         =   $validateFunc->trim_val($dataRow3[$row3]['E']);
+                    if (is_numeric($InvoiceNumber) && $validateFunc->is_scientific_notation($InvoiceNumber)) {
+                        $InvoiceNumber = sprintf('%.0f', (float) $InvoiceNumber);
+                    } elseif (isset($dataRow[$row]['E']) && is_float($dataRow[$row]['E'])) {
+                        $InvoiceNumber = sprintf('%.0f', $dataRow[$row]['E']);
+                    }
                     $SuplementaryValue     =   $validateFunc->trim_val($dataRow3[$row3]['F']);
                     $ProcedureCode         =   $validateFunc->trim_val($dataRow3[$row3]['G']);
                     $ExtendedCode          =   $validateFunc->trim_val($dataRow3[$row3]['H']);

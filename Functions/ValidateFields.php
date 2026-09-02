@@ -113,6 +113,13 @@ class ValidateFields extends DBConnection{
         }
     }
 
+    public function is_scientific_notation($value){
+        if(preg_match('/^-?\d+(\.\d+)?[eE][+-]?\d+$/', trim($value))){
+            return true;
+        }
+        return false;
+    }
+
     public function match_manifestFormat($manifest){
         if(preg_match('/^[A-Z]{3}[0-9]{4}-[0-9]{2}$/', $manifest)) { 
             return true;
