@@ -753,17 +753,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //InvoiceNumber
-                    if( empty($InvoiceNumber) )
-                    {
-                        $invoiceNumberRequired[] = $row - 1;
-                        $errorCounter++;
-                    }
-                    else if( $validateFunc->max_length($InvoiceNumber, 300) ) 
+                    if( $validateFunc->max_length($InvoiceNumber, 300) ) 
                     { 
-                        $invoiceNumber[] = $row - 1; 
-                        $errorCounter1++; 
+                        $invoiceNumber[] = $row - 1; $errorCounter1++; 
                     }
-                    if( !empty($InvoiceNumber) && !preg_match('/^[A-Za-z0-9 ]+$/', $InvoiceNumber) )
+                    if( !empty($InvoiceNumber) && ($validateFunc->match_char($InvoiceNumber)) == 0 )
                     {
                         $invoiceNumberMatch[] = $row - 1; 
                         $errorCounter++; 
@@ -934,8 +928,8 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     foreach($headingsArray as $columnKey => $columnHeading) {
 
                         //VALUES
-                        $TermsOfDelivery =   $validateFunc->trim_val($dataRow[$row]['A']);
-                        $TermsOfPayment  =   $validateFunc->trim_val($dataRow[$row]['B']);
+                        $TermsOfDelivery =   strtoupper($validateFunc->trim_val($dataRow[$row]['A']));
+                        $TermsOfPayment  =   strtoupper($validateFunc->trim_val($dataRow[$row]['B']));
                     }
 
                 /* VALIDATE FIELD VALUES */
@@ -949,13 +943,13 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         if( !$checkTermsOfDelivery )
                         {
                             $termsOfDelivery[] = $row - 1; 
-                            $errorCounter1++; 
+                            $errorCounter++; 
                         }
 
                     }else{
 
                         $termsOfDelivery[] = $row - 1; 
-                        $errorCounter1++; 
+                        $errorCounter++; 
                     }
 
                     //TermsOfPayment
@@ -967,13 +961,13 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         if( !$checkTermsOfPayment )
                         {
                             $termsOfPayment[] = $row - 1; 
-                            $errorCounter1++; 
+                            $errorCounter++; 
                         }
 
                     }else{
 
                         $termsOfPayment[] = $row - 1; 
-                        $errorCounter1++; 
+                        $errorCounter++; 
                     }
             }
         }
@@ -1296,13 +1290,6 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             
             // InvoiceNumber
-            if(!empty($invoiceNumberRequired)){
-                $errorLists[] = array(
-                                    "ErrMsg" => "Invoice Number is required",
-                                    "Column" => "Invoice Number",
-                                    "Rows" => implode(", " ,$invoiceNumberRequired)
-                                );
-            }
             if(!empty($invoiceNumber)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Exceeds the max characters allowed (300)",
@@ -1448,7 +1435,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             //TermsOfDelivery
             if(!empty($termsOfDelivery)){ 
                 $errorLists[] = array(
-                                    "ErrMsg" => "Invalid Term of Delivery - Required",
+                                    "ErrMsg" => "Invalid or missing Terms of Delivery code",
                                     "Column" => "Terms Of Delivery",
                                     "Rows" => implode(", " ,$termsOfDelivery)
                                 );
@@ -1457,8 +1444,8 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             //TermsOfPayment
             if(!empty($termsOfPayment)){ 
                 $errorLists[] = array(
-                                    "ErrMsg" => "Invalid Term of Payment - Required",
-                                    "Column" => "Terms Of Delivery",
+                                    "ErrMsg" => "Invalid or missing Terms of Payment code",
+                                    "Column" => "Terms Of Payment",
                                     "Rows" => implode(", " ,$termsOfPayment)
                                 );
             }
