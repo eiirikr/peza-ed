@@ -212,7 +212,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //Address
-                    if( $validateFunc->max_length($Address, 105) ) 
+                    if( $validateFunc->max_length($Address, 210) ) 
                     { 
                         $address[] = $row - 1; $errorCounter1++; 
                     }
@@ -1007,7 +1007,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             //Address
             if(!empty($address)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Exceeds the max characters allowed (105)",
+                                    "ErrMsg" => "Exceeds the max characters allowed (210)",
                                     "Column" => "Address",
                                     "Rows" => implode(", " ,$address)
                                 );
