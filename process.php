@@ -107,6 +107,1064 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
     $errorCounter1 = 0; //PROCEED EVENTHOUGH NOT CORRECTED
     $errorLists = array();
 
+
+    $isBulkClient = (strtoupper(trim($cltcode)) === "BEAEROBV");
+
+    if ($isBulkClient) {
+
+        // ================================================================
+        // BULK MODE (BEAEROBV): single 'Appl' sheet, one row = one application
+        // ================================================================
+
+
+    $objWorksheetAppl = $objPHPExcel->getSheetByName('Appl');
+
+    if (!$objWorksheetAppl) {
+        echo "<script>
+                alert('Cannot proceed. Could not find the Appl worksheet. Please check file.');
+                window.location.href='index.php?token=$token';
+            </script>";
+        unlink($excelDetails['inputFile']);
+        die();
+    }
+
+    $highestColumnAppl = $objWorksheetAppl->getHighestColumn();
+    $highestRowAppl     = $objWorksheetAppl->getHighestRow();
+
+    if (strtoupper($highestColumnAppl) != 'AE') {
+        echo "<script>
+                alert('File content is not compatible. Please check the Appl sheet.');
+                window.location.href='index.php?token=$token';
+            </script>";
+        unlink($excelDetails['inputFile']);
+        die();
+    }
+
+    $checkA2 = $objWorksheetAppl->getCell('A2')->getValue();
+    if ($checkA2 == NULL || $checkA2 == '') {
+        echo "<script>
+                alert('Cannot proceed. Please check file.');
+                window.location.href='index.php?token=$token';
+            </script>";
+        unlink($excelDetails['inputFile']);
+        die();
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Item lookup
+    |--------------------------------------------------------------------------
+    */
+    function __lookupItemByPTOPSRowID($conn, $ptopsRowId, $allAccIDs) {
+
+        $accIds = array_filter(array_map('trim', explode(',', $allAccIDs)));
+        if (empty($accIds) || $ptopsRowId === '') {
+            return null;
+        }
+
+        $placeholders = implode(',', array_fill(0, count($accIds), '?'));
+
+        $sql = "SELECT TOP 1
+                    t.PTOPS_ROWID   AS PTOPS_ROWID,
+                    t.HSCode        AS HsCode,
+                    t.HSCode_tar    AS HsCode_Tar,
+                    t.commoditydesc AS commodityDesc,
+                    t.commoditycode AS commodityCode,
+                    t.Status        AS status,
+                    t.ecai_no       AS ecai_no,
+                    g.uom_cod1      AS uom_cod1
+                FROM dbo.tblExItem t
+                LEFT OUTER JOIN PEZA.dbo.GBTARTAB g
+                    ON t.HSCode = g.hs6_cod + g.tar_pr1
+                    AND t.HSCode_Tar = g.tar_pr2
+                WHERE t.PTOPS_ROWID = ?
+                    AND t.accreditation_id IN ($placeholders)";
+
+        $params = array_merge([$ptopsRowId], $accIds);
+
+        $stmt = $conn->connectPEZAexpPTOPS()->prepare($sql);
+        $stmt->execute($params);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $result ? $result : null;
+    }
+
+    $r = -1;
+    $applicationRowsAppl = array(); // row numbers that hold a real application
+
+    for ($row = 2; $row <= $highestRowAppl; ++$row) {
+
+        $dataRow = $objWorksheetAppl->rangeToArray('A'.$row.':AE'.$row, null, true, true, true);
+
+        if (trim($dataRow[$row]['A']) == '') {
+            continue; // skip fully blank row
+        }
+
+        ++$r;
+        $applicationRowsAppl[] = $row;
+
+        $Consignee            = strtoupper($validateFunc->trim_val($dataRow[$row]['A']));
+        $ConAdr1              = $validateFunc->trim_val($dataRow[$row]['B']);
+        $ConAdr2              = $validateFunc->trim_val($dataRow[$row]['C']);
+        $ConAdr3              = $validateFunc->trim_val($dataRow[$row]['D']);
+        $Port                 = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['E'])));
+        $PurposeOfExportation = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['F'])));
+        $ManifestNo           = strtoupper($validateFunc->trim_val($dataRow[$row]['G']));
+        $BillOfLading         = $validateFunc->trim_val($dataRow[$row]['H']);
+        $VesselAircraft       = $validateFunc->trim_val2($dataRow[$row]['I']);
+        $LocationOfGoods      = strtoupper(trim($validateFunc->trim_val2($dataRow[$row]['J'])));
+        $ProvinceOfOrigin     = $validateFunc->trim_val2($dataRow[$row]['K']);
+        $CountryOfDestination = strtoupper(trim($validateFunc->trim_val2($dataRow[$row]['L'])));
+        $PortOfLoading        = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['M'])));
+        $PortOfDeparture      = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['N'])));
+        $ContainerNumber      = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['O'])));
+        $SealNumber           = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['P'])));
+        $ContainerSize        = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['Q'])));
+        $ExItemID             = trim($validateFunc->trim_val($dataRow[$row]['R']));
+        $Marks1                = strtoupper($validateFunc->trim_val($dataRow[$row]['S']));
+        $Marks2                = strtoupper($validateFunc->trim_val($dataRow[$row]['T']));
+        $NumberOfPackage      = $validateFunc->trim_val($dataRow[$row]['U']);
+        $PackageCode          = $validateFunc->trim_val($dataRow[$row]['V']);
+        $InvoiceNumber        = $validateFunc->trim_val($dataRow[$row]['W']);
+        $SuplementaryValue    = $validateFunc->trim_val($dataRow[$row]['X']);
+        $ProcedureCode        = $validateFunc->trim_val($dataRow[$row]['Y']);
+        $ExtendedCode         = $validateFunc->trim_val($dataRow[$row]['Z']);
+        $ItemGrossWeight      = $validateFunc->trim_val($dataRow[$row]['AA']);
+        $ItemNetWeight        = $validateFunc->trim_val($dataRow[$row]['AB']);
+        $ItemInvoiceValue     = $validateFunc->trim_val($dataRow[$row]['AC']);
+        $TermsOfDelivery      = strtoupper($validateFunc->trim_val($dataRow[$row]['AD']));
+        $TermsOfPayment       = strtoupper($validateFunc->trim_val($dataRow[$row]['AE']));
+
+        /* ============================ VALIDATE ============================ */
+
+        // Consignee
+        if( $validateFunc->max_length($Consignee, 70) )
+        {
+            $consignee[] = $row - 1;
+            $errorCounter1++;
+        }
+        if( !empty($Consignee) && ($validateFunc->match_char($Consignee)) == 0 )
+        {
+            $consigneeMatch[] = $row - 1;
+            $errorCounter++;
+        }
+
+        if( !empty($Consignee) ) {
+            $checkConsigneeExists = $validateFunc->__checkValidConsignee($conn, $Consignee, $cltcode);
+            if( !$checkConsigneeExists )
+            {
+                $checkConsignee[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkConsignee[] = $row - 1;
+            $errorCounter++;
+        }
+
+        if( $validateFunc->max_length($ConAdr1, 35) ) { $conAdr1Len[] = $row - 1; $errorCounter1++; }
+        if( $validateFunc->max_length($ConAdr2, 35) ) { $conAdr2Len[] = $row - 1; $errorCounter1++; }
+        if( $validateFunc->max_length($ConAdr3, 35) ) { $conAdr3Len[] = $row - 1; $errorCounter1++; }
+
+        // Port (Office of Clearance)
+        if( !empty($Port) )
+        {
+            $checkOfficeOfClearanceExists = $validateFunc->__checkValidPortOfDeparture($Port);
+
+            if( !$checkOfficeOfClearanceExists )
+            {
+                $checkOfficeOfClearance[] = $row - 1;
+                $errorCounter++;
+            } else {
+                if ($checkOfficeOfClearanceExists['offClrMode'] === "BY AIR")
+                {
+                    $checkModeOfTransportation[] = $row - 1;
+                }
+            }
+        } else {
+            $checkOfficeOfClearance[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // PurposeOfExportation
+        if( !empty($PurposeOfExportation) )
+        {
+            $checkPurposeOfExportationExists = $validateFunc->__checkValidPurposeOfExportation($PurposeOfExportation);
+            if( !$checkPurposeOfExportationExists )
+            {
+                $checkPurposeOfExportation[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkPurposeOfExportation[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // ManifestNo
+        if( !empty($ManifestNo) && ($validateFunc->match_manifestFormat($ManifestNo)) == 0 )
+        {
+            $manifestNoMatch[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // BillOfLading
+        if( empty($BillOfLading) )
+        {
+            $billOfLadingRequired[] = $row - 1;
+            $errorCounter++;
+        }
+        else if( $validateFunc->max_length($BillOfLading, 26) )
+        {
+            $billOfLading[] = $row - 1;
+            $errorCounter++;
+        }
+        if( !empty($BillOfLading) && ($validateFunc->match_alphanum($BillOfLading)) == 0 )
+        {
+            $billOfLadingMatch[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // Same broker-specific AWB check-digit validation as the general flow
+        $billOfLadingInvalid = isset($billOfLadingInvalid) ? $billOfLadingInvalid : [];
+
+        $requiredBrokers = [
+            "200615811", "200615811000", "215722696", "215722696000",
+            "225879904", "225879904000", "204867435", "204867435000",
+            "432899304", "432899304000", "738464204", "738464204000"
+        ];
+
+        if (in_array(trim($locbroktin), $requiredBrokers))
+        {
+            $BillOfLading = trim($BillOfLading);
+
+            if ($BillOfLading == "")
+            {
+                $billOfLadingInvalid[] = $row - 1;
+                $errorCounter++;
+            }
+            else
+            {
+                if (
+                    preg_match('/^(\d)\1{6,9}$/', $BillOfLading) ||
+                    $BillOfLading == "1111111116"
+                )
+                {
+                    $billOfLadingInvalid[] = $row - 1;
+                    $errorCounter++;
+                }
+                else if (!preg_match('/^\d{10}$/', $BillOfLading))
+                {
+                    $billOfLadingInvalid[] = $row - 1;
+                    $errorCounter++;
+                }
+                else
+                {
+                    $first9 = substr($BillOfLading, 0, 9);
+                    $checkDigit = substr($BillOfLading, 9, 1);
+
+                    if (($first9 % 7) != $checkDigit)
+                    {
+                        $billOfLadingInvalid[] = $row - 1;
+                        $errorCounter++;
+                    }
+                }
+            }
+        }
+
+        // VesselAircraft
+        if( empty($VesselAircraft) )
+        {
+            $vesselAircraftRequired[] = $row - 1;
+            $errorCounter++;
+        }
+        else if( $validateFunc->max_length($VesselAircraft, 27) )
+        {
+            $vesselAircraft[] = $row - 1;
+            $errorCounter++;
+        }
+        if( !empty($VesselAircraft) && !preg_match('/^[A-Za-z0-9 ]+$/', $VesselAircraft) )
+        {
+            $vesselAircraftMatch[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // LocationOfGoods
+        if( !empty($LocationOfGoods) ) {
+            $checkLocationOfGoodsExists = $validateFunc->__checkValidLocationOfGoods($LocationOfGoods);
+            if( !$checkLocationOfGoodsExists )
+            {
+                $checkLocationOfGoods[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkLocationOfGoods[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // ProvinceOfOrigin
+        if( !empty($ProvinceOfOrigin) ) {
+            $checkProvinceOfOriginExists = $validateFunc->__checkValidProvinceOfOrigin($ProvinceOfOrigin);
+            if( !$checkProvinceOfOriginExists )
+            {
+                $checkProvinceOfOrigin[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkProvinceOfOrigin[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // CountryOfDestination
+        if( !empty($CountryOfDestination) ) {
+            $checkCountryOfDestinationExists = $validateFunc->__checkValidCountryOfDestination($CountryOfDestination);
+            if( !$checkCountryOfDestinationExists )
+            {
+                $checkCountryOfDestination[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkCountryOfDestination[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // PortOfLoading
+        if( !empty($PortOfLoading) ) {
+            $checkPortOfLoadingExists = $validateFunc->__checkValidPortOfLoading($PortOfLoading);
+            if( !$checkPortOfLoadingExists )
+            {
+                $checkPortOfLoading[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkPortOfLoading[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // PortOfDeparture
+        if( !empty($PortOfDeparture) ) {
+            $checkPortOfDepartureExists = $validateFunc->__checkValidPortOfDeparture($PortOfDeparture);
+            if( !$checkPortOfDepartureExists )
+            {
+                $checkPortOfDeparture[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkPortOfDeparture[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // Container fields -- gated per-row by THIS row's own mode of transport
+        $thisRowIsByAir = !empty($checkModeOfTransportation) && in_array($row - 1, $checkModeOfTransportation);
+
+        if ($thisRowIsByAir)
+        {
+            if (!empty($ContainerNumber) || !empty($SealNumber) || !empty($ContainerSize))
+            {
+                $containerDetailsNotAllowed[] = $row - 1;
+                $errorCounter++;
+            }
+        }
+        else
+        {
+            if( empty($ContainerNumber) )
+            {
+                $containerNumberRequired[] = $row - 1;
+                $errorCounter++;
+            }
+            else if( $validateFunc->max_length($ContainerNumber, 100) )
+            {
+                $containerNumber[] = $row - 1;
+                $errorCounter1++;
+            }
+            else if( ($validateFunc->match_alphanum($ContainerNumber)) == 0 )
+            {
+                $containerNumberMatch[] = $row - 1;
+                $errorCounter++;
+            }
+
+            if( empty($SealNumber) )
+            {
+                $sealNumberRequired[] = $row - 1;
+                $errorCounter++;
+            }
+            else if( $validateFunc->max_length($SealNumber, 100) )
+            {
+                $sealNumber[] = $row - 1;
+                $errorCounter1++;
+            }
+            else if( ($validateFunc->match_alphanum($SealNumber)) == 0 )
+            {
+                $sealNumberMatch[] = $row - 1;
+                $errorCounter++;
+            }
+
+            if( empty($ContainerSize) )
+            {
+                $containerSizeRequired[] = $row - 1;
+                $errorCounter++;
+            }
+            else
+            {
+                $checkContainerSizeExists = $validateFunc->__checkValidContainerSize($ContainerSize);
+                if( !$checkContainerSizeExists )
+                {
+                    $checkContainerSize[] = $row - 1;
+                    $errorCounter++;
+                }
+            }
+        }
+
+        $checkItemCodeExists = null;
+        if( empty($ExItemID) )
+        {
+            $checkItemCode[] = $row - 1;
+            $errorCounter++;
+        }
+        else if( ($validateFunc->match_numbers($ExItemID)) == 0 )
+        {
+            $checkItemCode[] = $row - 1;
+            $errorCounter++;
+        }
+        else
+        {
+            $checkItemCodeExists = __lookupItemByPTOPSRowID($conn, $ExItemID, $allaccids);
+            if( empty($checkItemCodeExists) )
+            {
+                $checkItemCode[] = $row - 1;
+                $errorCounter++;
+            }
+            else
+            {
+                if (!empty($checkItemCodeExists['uom_cod1']) && empty($SuplementaryValue))
+                {
+                    $checkSuplementaryValue[] = $row - 1;
+                    $errorCounter++;
+                }
+                if (empty($checkItemCodeExists['uom_cod1']) && !empty($SuplementaryValue))
+                {
+                    $checkSuplementaryValue1[] = $row - 1;
+                    $errorCounter++;
+                }
+            }
+        }
+
+        // Marks and Numbers
+        if( empty($Marks1) )
+        {
+            $marksAndNumberMatch[] = $row - 1;
+            $errorCounter++;
+        }
+        else if( $validateFunc->max_length($Marks1, 35) )
+        {
+            $marksAndNumber[] = $row - 1;
+            $errorCounter1++;
+        }
+        if( !empty($Marks1) && !preg_match('/^[A-Za-z0-9 ]+$/', $Marks1) )
+        {
+            $marksAndNumberSpecialChar[] = $row - 1;
+            $errorCounter++;
+        }
+        if( $validateFunc->max_length($Marks2, 35) )
+        {
+            $marks2Len[] = $row - 1;
+            $errorCounter1++;
+        }
+        if( !empty($Marks2) && !preg_match('/^[A-Za-z0-9 ]+$/', $Marks2) )
+        {
+            $marks2Match[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // NumberOfPackage
+        if( $validateFunc->max_length($NumberOfPackage, 10) )
+        {
+            $numberOfPackage[] = $row - 1;
+            $errorCounter1++;
+        }
+
+        if ( $NumberOfPackage === '' )
+        {
+            $numberOfPackageMatch[] = $row - 1;
+            $errorCounter++;
+        }
+        else if ( ($validateFunc->match_numbers($NumberOfPackage)) == 0 )
+        {
+            $numberOfPackageMatch[] = $row - 1;
+            $errorCounter++;
+        }
+        else if ( (int)$NumberOfPackage <= 0 )
+        {
+            $numberOfPackageZero[] = $row - 1;
+            $errorCounter++;
+        }
+        else if ( (float)$NumberOfPackage > 2147483647 )
+        {
+            $numberOfPackageTooLarge[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // PackageCode
+        if( !empty($PackageCode) && $validateFunc->match_packcodeFormat($PackageCode) ) {
+            $checkPackCodeExists = $validateFunc->__checkValidPackCode($PackageCode);
+            if( !$checkPackCodeExists )
+            {
+                $checkPackCode[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkPackCode[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // InvoiceNumber
+        if( empty($InvoiceNumber) )
+        {
+            $invoiceNumberRequired[] = $row - 1;
+            $errorCounter++;
+        }
+        else
+        {
+            if( $validateFunc->max_length($InvoiceNumber, 300) )
+            {
+                $invoiceNumber[] = $row - 1;
+                $errorCounter1++;
+            }
+            if( ($validateFunc->match_char($InvoiceNumber)) == 0 )
+            {
+                $invoiceNumberMatch[] = $row - 1;
+                $errorCounter++;
+            }
+        }
+
+        // SuplementaryValue
+        if( !empty($SuplementaryValue) )
+        {
+            if( $validateFunc->max_length($SuplementaryValue, 15) )
+            {
+                $suplementaryValueLength[] = $row - 1;
+                $errorCounter++;
+            }
+            else if( ($validateFunc->match_numbers($SuplementaryValue)) == 0 )
+            {
+                $suplementaryValueMatch[] = $row - 1;
+                $errorCounter++;
+            }
+        }
+
+        // ProcedureCode
+        if( !empty($ProcedureCode) ) {
+            $checkProcedureCodeExists = $validateFunc->__checkValidNatlCode($ProcedureCode);
+            if( !$checkProcedureCodeExists )
+            {
+                $checkProcedureCode[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkProcedureCode[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // ExtendedCode
+        if( !empty($ExtendedCode) ) {
+            $checkExtendedCodeExists = $validateFunc->__checkValidExtCode($ExtendedCode);
+            if( !$checkExtendedCodeExists )
+            {
+                $checkExtCode[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $checkExtCode[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // ItemGrossWeight
+        if( empty($ItemGrossWeight) )
+        {
+            $itemGrossWeightRequired[] = $row - 1;
+            $errorCounter++;
+        }
+        else
+        {
+            if( $validateFunc->max_length($ItemGrossWeight, 10) )
+            {
+                $itemGrossWeightLength[] = $row - 1;
+                $errorCounter++;
+            }
+            else if( !$validateFunc->match_weightFormat($ItemGrossWeight) || (float)$ItemGrossWeight <= 0 )
+            {
+                $itemGrossWeightMatch[] = $row - 1;
+                $errorCounter++;
+            }
+        }
+
+        // ItemNetWeight
+        if( empty($ItemNetWeight) )
+        {
+            $itemNetWeightRequired[] = $row - 1;
+            $errorCounter++;
+        }
+        else
+        {
+            if( $validateFunc->max_length($ItemNetWeight, 10) )
+            {
+                $itemNetWeightLength[] = $row - 1;
+                $errorCounter++;
+            }
+            else if( !$validateFunc->match_weightFormat($ItemNetWeight) || (float)$ItemNetWeight <= 0 )
+            {
+                $itemNetWeightMatch[] = $row - 1;
+                $errorCounter++;
+            }
+            else if( !empty($ItemGrossWeight) && $validateFunc->match_weightFormat($ItemGrossWeight) && (float)$ItemNetWeight > (float)$ItemGrossWeight )
+            {
+                $itemNetExceedsGross[] = $row - 1;
+                $errorCounter++;
+            }
+        }
+
+        // ItemInvoiceValue
+        if( empty($ItemInvoiceValue) )
+        {
+            $itemInvoiceValueRequired[] = $row - 1;
+            $errorCounter++;
+        }
+        else if( $validateFunc->max_length($ItemInvoiceValue, 11) )
+        {
+            $itemInvoiceValueLength[] = $row - 1;
+            $errorCounter++;
+        }
+        else if( !$validateFunc->match_weightFormat($ItemInvoiceValue) || (float)$ItemInvoiceValue <= 0 )
+        {
+            $itemInvoiceValueMatch[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // TermsOfDelivery
+        if( !empty($TermsOfDelivery) ) {
+            $checkTermsOfDelivery = $validateFunc->__checkValidTermsOfDelivery($TermsOfDelivery);
+            if( !$checkTermsOfDelivery )
+            {
+                $termsOfDelivery[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $termsOfDelivery[] = $row - 1;
+            $errorCounter++;
+        }
+
+        // TermsOfPayment
+        if( !empty($TermsOfPayment) ) {
+            $checkTermsOfPayment = $validateFunc->__checkValidTermsOfPayment($TermsOfPayment);
+            if( !$checkTermsOfPayment )
+            {
+                $termsOfPayment[] = $row - 1;
+                $errorCounter++;
+            }
+        } else {
+            $termsOfPayment[] = $row - 1;
+            $errorCounter++;
+        }
+
+    } // end validation loop
+
+    if (empty($applicationRowsAppl)) {
+        echo "<script>
+                alert('Cannot proceed. Please check file.');
+                window.location.href='index.php?token=$token';
+            </script>";
+        unlink($excelDetails['inputFile']);
+        die();
+    }
+
+    if ($errorCounter > 0 || $errorCounter1 > 0) {
+
+        /* ERROR MESSAGES */
+        if(!empty($consignee)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (70)", "Column" => "Consignee", "Rows" => implode(", ", $consignee)); }
+        if(!empty($consigneeMatch)){ $errorLists[] = array("ErrMsg" => "Only accept letters, numbers and few special characters (-_.,:;#$%()*/) - Required", "Column" => "Consignee", "Rows" => implode(", ", $consigneeMatch)); }
+        if(!empty($checkConsignee)){ $errorLists[] = array("ErrMsg" => "Invalid Consignee/Buyer, please check Buyer Lookup", "Column" => "Consignee", "Rows" => implode(", ", $checkConsignee)); }
+
+        if(!empty($conAdr1Len)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (35)", "Column" => "Con Address 1", "Rows" => implode(", ", $conAdr1Len)); }
+        if(!empty($conAdr2Len)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (35)", "Column" => "Con Address 2", "Rows" => implode(", ", $conAdr2Len)); }
+        if(!empty($conAdr3Len)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (35)", "Column" => "Con Address 3", "Rows" => implode(", ", $conAdr3Len)); }
+
+        if(!empty($checkOfficeOfClearance)){ $errorLists[] = array("ErrMsg" => "Invalid Port", "Column" => "Office of Clearance", "Rows" => implode(", ", $checkOfficeOfClearance)); }
+        if(!empty($checkPurposeOfExportation)){ $errorLists[] = array("ErrMsg" => "Invalid Purpose of Exportation", "Column" => "Purpose Of Exportation", "Rows" => implode(", ", $checkPurposeOfExportation)); }
+        if(!empty($manifestNoMatch)){ $errorLists[] = array("ErrMsg" => "Invalid Manifest Number! Format: NNNMMMM-YY", "Column" => "Manifest Number", "Rows" => implode(", ", $manifestNoMatch)); }
+
+        if(!empty($billOfLadingRequired)){ $errorLists[] = array("ErrMsg" => "Bill of Lading/Airbill is required", "Column" => "Bill of Lading", "Rows" => implode(", ", $billOfLadingRequired)); }
+        if(!empty($billOfLading)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (26)", "Column" => "Bill of Lading", "Rows" => implode(", ", $billOfLading)); }
+        if(!empty($billOfLadingMatch)){ $errorLists[] = array("ErrMsg" => "Only accept letters and numbers - Required", "Column" => "Bill of Lading", "Rows" => implode(", ", $billOfLadingMatch)); }
+        if(!empty($billOfLadingInvalid)){ $errorLists[] = array("ErrMsg" => "Please enter a valid bill of lading/airway bill.", "Column" => "Bill of Lading", "Rows" => implode(", ", $billOfLadingInvalid)); }
+
+        if(!empty($vesselAircraftRequired)){ $errorLists[] = array("ErrMsg" => "Vessel/Aircraft is required", "Column" => "Vessel / Aircraft", "Rows" => implode(", ", $vesselAircraftRequired)); }
+        if(!empty($vesselAircraft)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (27)", "Column" => "Vessel / Aircraft", "Rows" => implode(", ", $vesselAircraft)); }
+        if(!empty($vesselAircraftMatch)){ $errorLists[] = array("ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters", "Column" => "Vessel / Aircraft", "Rows" => implode(", ", $vesselAircraftMatch)); }
+
+        if(!empty($checkLocationOfGoods)){ $errorLists[] = array("ErrMsg" => "Invalid Location of Goods", "Column" => "Location of Goods", "Rows" => implode(", ", $checkLocationOfGoods)); }
+        if(!empty($checkProvinceOfOrigin)){ $errorLists[] = array("ErrMsg" => "Invalid Province of Origin", "Column" => "Province of Origin", "Rows" => implode(", ", $checkProvinceOfOrigin)); }
+        if(!empty($checkCountryOfDestination)){ $errorLists[] = array("ErrMsg" => "Invalid Country of Destination", "Column" => "Country of Destination", "Rows" => implode(", ", $checkCountryOfDestination)); }
+        if(!empty($checkPortOfLoading)){ $errorLists[] = array("ErrMsg" => "Invalid Port of Loading", "Column" => "Port of Loading", "Rows" => implode(", ", $checkPortOfLoading)); }
+        if(!empty($checkPortOfDeparture)){ $errorLists[] = array("ErrMsg" => "Invalid Port of Departure", "Column" => "Port of Departure", "Rows" => implode(", ", $checkPortOfDeparture)); }
+
+        if(!empty($containerNumberRequired)){ $errorLists[] = array("ErrMsg" => "Container Number is required", "Column" => "Container Number", "Rows" => implode(", ", $containerNumberRequired)); }
+        if(!empty($containerNumber)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (100)", "Column" => "Container Number", "Rows" => implode(", ", $containerNumber)); }
+        if(!empty($containerNumberMatch)){ $errorLists[] = array("ErrMsg" => "Only letters and numbers are allowed - no special characters", "Column" => "Container Number", "Rows" => implode(", ", $containerNumberMatch)); }
+        if(!empty($sealNumberRequired)){ $errorLists[] = array("ErrMsg" => "Seal Number is required", "Column" => "Seal Number", "Rows" => implode(", ", $sealNumberRequired)); }
+        if(!empty($sealNumber)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (100)", "Column" => "Seal Number", "Rows" => implode(", ", $sealNumber)); }
+        if(!empty($sealNumberMatch)){ $errorLists[] = array("ErrMsg" => "Only letters and numbers are allowed - no special characters", "Column" => "Seal Number", "Rows" => implode(", ", $sealNumberMatch)); }
+        if(!empty($containerSizeRequired)){ $errorLists[] = array("ErrMsg" => "Container Size is required", "Column" => "Container Size", "Rows" => implode(", ", $containerSizeRequired)); }
+        if(!empty($checkContainerSize)){ $errorLists[] = array("ErrMsg" => "Invalid Container Size", "Column" => "Container Size", "Rows" => implode(", ", $checkContainerSize)); }
+        if(!empty($containerDetailsNotAllowed)){ $errorLists[] = array("ErrMsg" => "Container details are not allowed for this mode of transport.", "Column" => "Container Number, Seal Number, Container Size", "Rows" => implode(", ", $containerDetailsNotAllowed)); }
+
+        if(!empty($checkItemCode)){ $errorLists[] = array("ErrMsg" => "Invalid EX ITEM ID, please check Exportables Lookup", "Column" => "EX ITEM ID", "Rows" => implode(", ", $checkItemCode)); }
+
+        if(!empty($marksAndNumberMatch)){ $errorLists[] = array("ErrMsg" => "Marks and Numbers 1 is required", "Column" => "Marks and Numbers 1", "Rows" => implode(", ", $marksAndNumberMatch)); }
+        if(!empty($marksAndNumber)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (35)", "Column" => "Marks and Numbers 1", "Rows" => implode(", ", $marksAndNumber)); }
+        if(!empty($marksAndNumberSpecialChar)){ $errorLists[] = array("ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters", "Column" => "Marks and Numbers 1", "Rows" => implode(", ", $marksAndNumberSpecialChar)); }
+        if(!empty($marks2Len)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (35)", "Column" => "Marks and Numbers 2", "Rows" => implode(", ", $marks2Len)); }
+        if(!empty($marks2Match)){ $errorLists[] = array("ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters", "Column" => "Marks and Numbers 2", "Rows" => implode(", ", $marks2Match)); }
+
+        if(!empty($numberOfPackage)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (10)", "Column" => "Number of Package", "Rows" => implode(", ", $numberOfPackage)); }
+        if(!empty($numberOfPackageMatch)){ $errorLists[] = array("ErrMsg" => "Number of Package is required and must contain numbers only", "Column" => "Number of Package", "Rows" => implode(", ", $numberOfPackageMatch)); }
+        if(!empty($numberOfPackageZero)){ $errorLists[] = array("ErrMsg" => "Number of Package must be greater than 0", "Column" => "Number of Package", "Rows" => implode(", ", $numberOfPackageZero)); }
+        if(!empty($numberOfPackageTooLarge)){ $errorLists[] = array("ErrMsg" => "Number of Package exceeds the maximum allowed value (2,147,483,647)", "Column" => "Number of Package", "Rows" => implode(", ", $numberOfPackageTooLarge)); }
+
+        if(!empty($checkPackCode)){ $errorLists[] = array("ErrMsg" => "Invalid Package Code", "Column" => "Package Code", "Rows" => implode(", ", $checkPackCode)); }
+
+        if(!empty($invoiceNumberRequired)){ $errorLists[] = array("ErrMsg" => "Invoice Number is required", "Column" => "Invoice Number", "Rows" => implode(", ", $invoiceNumberRequired)); }
+        if(!empty($invoiceNumber)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (300)", "Column" => "Invoice Number", "Rows" => implode(", ", $invoiceNumber)); }
+        if(!empty($invoiceNumberMatch)){ $errorLists[] = array("ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters", "Column" => "Invoice Number", "Rows" => implode(", ", $invoiceNumberMatch)); }
+
+        if(!empty($suplementaryValueLength)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (15)", "Column" => "Supplementary Value", "Rows" => implode(", ", $suplementaryValueLength)); }
+        if(!empty($suplementaryValueMatch)){ $errorLists[] = array("ErrMsg" => "Invalid format. Only whole numbers are allowed - decimals and scientific notation (e.g. 1E+10) are not accepted", "Column" => "Supplementary Value", "Rows" => implode(", ", $suplementaryValueMatch)); }
+        if(!empty($checkSuplementaryValue)){ $errorLists[] = array("ErrMsg" => "Supplementary Value required for the following item", "Column" => "Supplementary Value", "Rows" => implode(", ", $checkSuplementaryValue)); }
+        if(!empty($checkSuplementaryValue1)){ $errorLists[] = array("ErrMsg" => "Supplementary Value is not allowed for the following item", "Column" => "Supplementary Value", "Rows" => implode(", ", $checkSuplementaryValue1)); }
+
+        if(!empty($checkProcedureCode)){ $errorLists[] = array("ErrMsg" => "Invalid or missing Procedure Code", "Column" => "Procedure Code", "Rows" => implode(", ", $checkProcedureCode)); }
+        if(!empty($checkExtCode)){ $errorLists[] = array("ErrMsg" => "Invalid or missing Extended Code", "Column" => "Extended Code", "Rows" => implode(", ", $checkExtCode)); }
+
+        if(!empty($itemGrossWeightRequired)){ $errorLists[] = array("ErrMsg" => "Item Gross Weight is required", "Column" => "Item Gross Weight", "Rows" => implode(", ", $itemGrossWeightRequired)); }
+        if(!empty($itemNetWeightRequired)){ $errorLists[] = array("ErrMsg" => "Item Net Weight is required", "Column" => "Item Net Weight", "Rows" => implode(", ", $itemNetWeightRequired)); }
+        if(!empty($itemGrossWeightMatch)){ $errorLists[] = array("ErrMsg" => "Invalid entry (e.g. 0.00) - Required", "Column" => "Item Gross Weight", "Rows" => implode(", ", $itemGrossWeightMatch)); }
+        if(!empty($itemGrossWeightLength)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (10)", "Column" => "Item Gross Weight", "Rows" => implode(", ", $itemGrossWeightLength)); }
+        if(!empty($itemNetWeightMatch)){ $errorLists[] = array("ErrMsg" => "Invalid entry (e.g. 0.00) - Required", "Column" => "Item Net Weight", "Rows" => implode(", ", $itemNetWeightMatch)); }
+        if(!empty($itemNetWeightLength)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (10)", "Column" => "Item Net Weight", "Rows" => implode(", ", $itemNetWeightLength)); }
+        if(!empty($itemNetExceedsGross)){ $errorLists[] = array("ErrMsg" => "Item Net Weight must not exceed Item Gross Weight", "Column" => "Item Net Weight", "Rows" => implode(", ", $itemNetExceedsGross)); }
+
+        if(!empty($itemInvoiceValueRequired)){ $errorLists[] = array("ErrMsg" => "Item Invoice Value is required", "Column" => "Item Invoice Value", "Rows" => implode(", ", $itemInvoiceValueRequired)); }
+        if(!empty($itemInvoiceValueLength)){ $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (11)", "Column" => "Item Invoice Value", "Rows" => implode(", ", $itemInvoiceValueLength)); }
+        if(!empty($itemInvoiceValueMatch)){ $errorLists[] = array("ErrMsg" => "Invalid entry (e.g. 1000.00) - Required", "Column" => "Item Invoice Value", "Rows" => implode(", ", $itemInvoiceValueMatch)); }
+
+        if(!empty($termsOfDelivery)){ $errorLists[] = array("ErrMsg" => "Invalid or missing Terms of Delivery code", "Column" => "Terms Of Delivery", "Rows" => implode(", ", $termsOfDelivery)); }
+        if(!empty($termsOfPayment)){ $errorLists[] = array("ErrMsg" => "Invalid or missing Terms of Payment code", "Column" => "Terms Of Payment", "Rows" => implode(", ", $termsOfPayment)); }
+
+        $_SESSION['errormsg'] = $errorLists;
+        $_SESSION['required'] = $errorCounter;
+        $_SESSION['proceed']  = $errorCounter1;
+
+        echo "<script>
+                window.location.href='index.php?msg=error&token=$token';
+            </script>";
+        die();
+
+    } else {
+
+        /* ============================ PROCESS / INSERT ============================ */
+
+        $objReader      = PHPExcel_IOFactory::createReader($excelDetails["type"]);
+        $objReader->setReadDataOnly(true);
+        $objPHPExcel    = $objReader->load($excelDetails["inputFile"]);
+        $objWorksheetAppl = $objPHPExcel->getSheetByName('Appl');
+
+        if (!$objWorksheetAppl) {
+            echo "<script>
+                    alert('Cannot proceed. Please check file.');
+                    window.location.href='index.php?token=$token';
+            </script>";
+            die();
+        }
+
+        $generatedApplNos = array();
+
+        foreach ($applicationRowsAppl as $row) {
+
+            $dataRow = $objWorksheetAppl->rangeToArray('A'.$row.':AE'.$row, null, true, true, true);
+
+            $Consignee            = strtoupper($validateFunc->trim_val($dataRow[$row]['A']));
+            $ConAdr1              = $validateFunc->trim_val($dataRow[$row]['B']);
+            $ConAdr2              = $validateFunc->trim_val($dataRow[$row]['C']);
+            $ConAdr3              = $validateFunc->trim_val($dataRow[$row]['D']);
+            $Port                 = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['E'])));
+            $PurposeOfExportation = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['F'])));
+            $ManifestNo           = strtoupper($validateFunc->trim_val($dataRow[$row]['G']));
+            $BillOfLading         = $validateFunc->trim_val($dataRow[$row]['H']);
+            $VesselAircraft       = $validateFunc->trim_val2($dataRow[$row]['I']);
+            $LocationOfGoods      = strtoupper(trim($validateFunc->trim_val2($dataRow[$row]['J'])));
+            $ProvinceOfOrigin     = $validateFunc->trim_val2($dataRow[$row]['K']);
+            $CountryOfDestination = strtoupper(trim($validateFunc->trim_val2($dataRow[$row]['L'])));
+            $PortOfLoading        = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['M'])));
+            $PortOfDeparture      = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['N'])));
+            $ContainerNumber      = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['O'])));
+            $SealNumber           = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['P'])));
+            $ContainerSize        = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['Q'])));
+            $ExItemID             = trim($validateFunc->trim_val($dataRow[$row]['R']));
+            $Marks1                = strtoupper($validateFunc->trim_val($dataRow[$row]['S']));
+            $Marks2                = strtoupper($validateFunc->trim_val($dataRow[$row]['T']));
+            $NumberOfPackage      = strtoupper($validateFunc->trim_val($dataRow[$row]['U']));
+            $PackageCode          = strtoupper($validateFunc->trim_val($dataRow[$row]['V']));
+            $InvoiceNumber        = strtoupper($validateFunc->trim_val($dataRow[$row]['W']));
+            $SuplementaryValue    = strtoupper($validateFunc->trim_val($dataRow[$row]['X']));
+            $ProcedureCode        = strtoupper($validateFunc->trim_val($dataRow[$row]['Y']));
+            $ExtendedCode         = strtoupper($validateFunc->trim_val($dataRow[$row]['Z']));
+            $ItemGrossWeight      = $validateFunc->trim_val($dataRow[$row]['AA']);
+            $ItemNetWeight        = $validateFunc->trim_val($dataRow[$row]['AB']);
+            $ItemInvoiceValue     = $validateFunc->trim_val($dataRow[$row]['AC']);
+            $TermsOfDelivery      = strtoupper($validateFunc->trim_val($dataRow[$row]['AD']));
+            $TermsOfPayment       = strtoupper($validateFunc->trim_val($dataRow[$row]['AE']));
+
+            $applNo = $validateFunc->generateApplNo($conn, $csncod);
+            $generatedApplNos[] = $applNo;
+
+            // ------------ tblEXPAPL_Master ------------ //
+
+            $forwarder = $lookupData->getForwarders($conn, $lstexporter);
+            $importer  = $lookupData->getImporters($conn, $loccod);
+            $exchRate  = $lookupData->getExchangeRate($conn, 'USD');
+            $modeofTransport = $lookupData->getModeofTransport($conn, $Port);
+
+            $insert_master = "INSERT INTO tblEXPAPL_Master (Applno, ConName, ConAdr1, ConAdr2, ConAdr3, OffClear, Manifest, Waybill, DECTIN, DECname, DecAdr1, DecAdr2, DecAdr3, Cexp, Cdest, Vessel, ExpCode, ExpName, ExpAdr1, ExpAdr2, RegOfc, mdec, mdec2, Exhrate, PortofLoad, PortofDept, ProvofOrig, CreationDate, Stat, ConTIN, IAN, LGoods, Purpose, cltcode, SenderID, modeOfTransport, isExcelFileAppl) 
+                            VALUES (:applno, :conname, :conadr1, :conadr2, :conadr3, :offclear, :manifest, :waybill, :dectin, :decname, :decadr1, :decadr2, :decadr3, :cexp, :cdest, :vessel, :expcode, :expname, :expadr1, :expadr2, :regofc, :mdec, :mdec2, :exhrate, :portofload, :portofdept, :provoforig, :creationdate, :stat, :contin, :ian, :lgoods, :purpose, :cltcode, :senderid, :modeoftransport, :isExcelFileAppl)";
+
+            try {
+                $stmt3 = $conn->connectIPPEZA()->prepare($insert_master);
+                $stmt3->execute([
+                    ':applno'           => $applNo,
+                    ':conname'          => $Consignee,
+                    ':conadr1'          => $ConAdr1,
+                    ':conadr2'          => $ConAdr2,
+                    ':conadr3'          => $ConAdr3,
+                    ':offclear'         => $Port,
+                    ':manifest'         => $ManifestNo,
+                    ':waybill'          => $BillOfLading,
+                    ':dectin'           => $locbroktin,
+                    ':decname'          => $lstexporter,
+                    ':decadr1'          => $forwarder['For_adr1'],
+                    ':decadr2'          => $forwarder['For_adr2'],
+                    ':decadr3'          => $forwarder['For_adr3'],
+                    ':cexp'             => 'PH',
+                    ':cdest'            => $CountryOfDestination,
+                    ':vessel'           => $VesselAircraft,
+                    ':expcode'          => $loccod,
+                    ':expname'          => $compNam,
+                    ':expadr1'          => $importer['address1'],
+                    ':expadr2'          => $importer['address2'],
+                    ':regofc'           => $importer['zonecode'],
+                    ':mdec'             => $mod_cod,
+                    ':mdec2'            => $mod_cod2,
+                    ':exhrate'          => $exchRate['rat_exc'],
+                    ':portofload'       => $PortOfLoading,
+                    ':portofdept'       => $PortOfDeparture,
+                    ':provoforig'       => $ProvinceOfOrigin,
+                    ':creationdate'     => date('Y-m-d H:i:s'),
+                    ':stat'             => 'C',
+                    ':contin'           => $locTin,
+                    ':ian'              => 'isPTOPS',
+                    ':lgoods'           => $LocationOfGoods,
+                    ':purpose'          => $PurposeOfExportation,
+                    ':cltcode'          => $cltcode,
+                    ':senderid'         => $userID,
+                    ':modeoftransport'  => $modeofTransport['offClrMode'],
+                    ':isExcelFileAppl'  => 1
+                ]);
+            } catch (PDOException $e3) {
+                echo "ERROR: " . $e3->getMessage();
+                die();
+            }
+
+            // ------------ tblEXPAPL_ContPEZA (only if by sea) ------------ //
+
+            $isByAir = ($modeofTransport['offClrMode'] === "BY AIR");
+
+            if (!$isByAir) {
+                try {
+                    $stmt = $conn->connectIPPEZA()->prepare("INSERT INTO tblEXPAPL_ContPEZA (Applno, Container, Seal, ContainerSize, ModeOfShipment) VALUES (:applno, :container, :seal, :containerSize, :modeOfShipment)");
+                    $stmt->execute([
+                        ':applno'        => $applNo,
+                        ':container'     => $ContainerNumber,
+                        ':seal'          => $SealNumber,
+                        ':containerSize' => $ContainerSize,
+                        ':modeOfShipment'=> "FCL"
+                    ]);
+                } catch (PDOException $e) {
+                    echo "ERROR: " . $e->getMessage();
+                    die();
+                }
+            }
+
+            // ------------ TBLEXPAPL_DETAIL (single item, resolved by PTOPS_ROWID) ------------ //
+
+            $checkItemCodeExists = __lookupItemByPTOPSRowID($conn, $ExItemID, $allaccids);
+
+            $isRegulated = "";
+            if ($checkItemCodeExists['status'] == "M") {
+                $isRegulated = "True";
+            } else if ($checkItemCodeExists['status'] == "A") {
+                $isRegulated = "False";
+            }
+
+            $Regulated    = $isRegulated;
+            $goodsdesc1   = $checkItemCodeExists['commodityDesc'];
+            $HSCode       = $checkItemCodeExists['HsCode'];
+            $HSCode_Tar   = $checkItemCodeExists['HsCode_Tar'];
+            $PTOPS_ROWID  = $checkItemCodeExists['PTOPS_ROWID'];
+            $ecai_no_list = $checkItemCodeExists['ecai_no'];
+            $ItemCodeText = $checkItemCodeExists['commodityCode'];
+
+            $quo_cod       = 'NNNNN';
+            $quo_dsc       = 'NOT RELATED, NO RSTRCTN/CNDTN/RYLTS/ARRNGMNTS';
+            $ValMethodNum  = '1';
+            $ValMethodDesc = 'TRANSACTION VALUE';
+            $Ocharges      = '0';
+            $IFreight      = '0';
+            $InvCurr       = 'USD';
+            $Pref          = 'NONE';
+            $ProcDesc      = $ProcedureCode;
+            $CoCode        = 'PH';
+
+            $ItemGrossWeight  = ($ItemGrossWeight === '') ? '' : number_format(round((float)str_replace(',', '', $ItemGrossWeight), 2), 2, '.', '');
+            $ItemNetWeight    = ($ItemNetWeight === '') ? '' : number_format(round((float)str_replace(',', '', $ItemNetWeight), 2), 2, '.', '');
+            $ItemInvoiceValue = number_format(round((float)str_replace(',', '', $ItemInvoiceValue), 2), 2, '.', '');
+
+            $itemNo = 1; // single-item lodgement: always item #1 of its own new application
+
+            $insert_sql1 = "INSERT INTO TBLEXPAPL_DETAIL (ApplNo, ItemNo, itemcode, Marks1, Marks2, NoPack, PackCode, InvNo, SupVal1, [Procedure], ExtCode, ItemGWeight, ItemNWeight, InvValue, quo_cod, quo_dsc, ValMethodNum, ValMethodDesc, Ocharges, IFreight, InvCurr, Pref, ProcDesc, CoCode, Regulated, goodsdesc1, HSCode, HSCode_Tar, PTOPS_ROWID, ecai_no_list)
+                            VALUES (:applno, :itemNo, :itemcode, :marks1, :marks2, :nopack, :packcode, :invno, :supval1, :procedure, :extcode, :itemgrossweight, :itemnetweight, :iteminvoicevalue, :quo_cod, :quo_dsc, :valMethodNum, :valMethodDesc, :Ocharges, :IFreight, :InvCurr, :Pref, :ProcDesc, :CoCode, :Regulated, :goodsdesc1, :HSCode, :HSCode_Tar, :PTOPS_ROWID, :ecai_no_list)";
+
+            try {
+                $stmt1 = $conn->connectIPPEZA()->prepare($insert_sql1);
+                $stmt1->execute([
+                    ':applno'          => $applNo,
+                    ':itemNo'          => $itemNo,
+                    ':itemcode'        => $ItemCodeText,
+                    ':marks1'          => $Marks1,
+                    ':marks2'          => $Marks2,
+                    ':nopack'          => $NumberOfPackage,
+                    ':packcode'        => $PackageCode,
+                    ':invno'           => $InvoiceNumber,
+                    ':supval1'         => $SuplementaryValue,
+                    ':procedure'       => $ProcedureCode,
+                    ':extcode'         => $ExtendedCode,
+                    ':itemgrossweight' => ($ItemGrossWeight === '') ? null : $ItemGrossWeight,
+                    ':itemnetweight'   => ($ItemNetWeight === '') ? null : $ItemNetWeight,
+                    ':iteminvoicevalue'=> $ItemInvoiceValue,
+                    ':quo_cod'         => $quo_cod,
+                    ':quo_dsc'         => $quo_dsc,
+                    ':valMethodNum'    => $ValMethodNum,
+                    ':valMethodDesc'   => $ValMethodDesc,
+                    ':Ocharges'        => $Ocharges,
+                    ':IFreight'        => $IFreight,
+                    ':InvCurr'         => $InvCurr,
+                    ':Pref'            => $Pref,
+                    ':ProcDesc'        => $ProcDesc,
+                    ':CoCode'          => $CoCode,
+                    ':Regulated'       => $Regulated,
+                    ':goodsdesc1'      => $goodsdesc1,
+                    ':HSCode'          => $HSCode,
+                    ':HSCode_Tar'      => $HSCode_Tar,
+                    ':PTOPS_ROWID'     => $PTOPS_ROWID,
+                    ':ecai_no_list'    => $ecai_no_list,
+                ]);
+            } catch (PDOException $e1) {
+                echo "ERROR : " . $e1->getMessage();
+                die();
+            }
+
+            // ------------ tblEXPAPL_FIN ------------ //
+
+            $BankCode     = "998";
+            $BranchCode   = "N.A.";
+            $CustomVal    = "300.00";
+            $CustCurr     = "USD";
+            $WharCurr     = "PHP";
+            $ArrasCurr    = "PHP";
+            $WOBankCharge = "0";
+            $Forex        = "0";
+            $BRN          = "000000000-0000000";
+
+            $insert_financial = "INSERT INTO tblEXPAPL_FIN (Applno, Tdelivery, Tpayment, BankCode, BranchCode, BankRef, CustomVal, CustCurr, WharCurr, ArrasCurr, WOBankCharge, Forex) 
+                            VALUES (:applno, :tdelivery, :tpayment, :bankcode, :branchcode, :bankref, :customval, :custcurr, :wharcurr, :arrascurr, :wobankcharge, :forex)";
+
+            try {
+                $stmt4 = $conn->connectIPPEZA()->prepare($insert_financial);
+                $stmt4->execute([
+                    ':applno'       => $applNo,
+                    ':tdelivery'    => $TermsOfDelivery,
+                    ':tpayment'     => $TermsOfPayment,
+                    ':bankcode'     => $BankCode,
+                    ':branchcode'   => $BranchCode,
+                    ':bankref'      => $BRN,
+                    ':customval'    => $CustomVal,
+                    ':custcurr'     => $CustCurr,
+                    ':wharcurr'     => $WharCurr,
+                    ':arrascurr'    => $ArrasCurr,
+                    ':wobankcharge' => $WOBankCharge,
+                    ':forex'        => $Forex,
+                ]);
+            } catch (PDOException $e3) {
+                echo "ERROR: " . $e3->getMessage();
+                die();
+            }
+
+            // ------------ Update totals for THIS application ------------ //
+
+            $totalItems = 0;
+            $totalPacks = 0;
+
+            $totalCount = $validateFunc->__getTotalItems($applNo);
+
+            if( isset($totalCount['totalItems']) && !empty($totalCount['totalItems']) )
+            {
+                $totalItems = $totalCount['totalItems'];
+            }
+            if( isset($totalCount['totalPacks']) && !empty($totalCount['totalPacks']) )
+            {
+                $totalPacks = number_format($totalCount['totalPacks']);
+                $totalPacks = (int)preg_replace('/[^\d]/', '', $totalPacks);
+            }
+
+            $updateQuery = "UPDATE TBLEXPAPL_MASTER SET ItemCon = '$totalItems', Items = '$totalItems', Packs = '$totalPacks' WHERE ApplNo = '$applNo'";
+
+            try {
+                $stmtUpdate = $conn->connectIPPEZA()->prepare($updateQuery);
+                $stmtUpdate->execute();
+            } catch (PDOException $a) {
+                echo "ERROR : " . $a->getMessage();
+                die();
+            }
+
+        } // end foreach application row
+
+        // ------------ REMOVE UPLOADED EXCEL FILE / SESSION FLOW ------------ //
+
+        $getFilename = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
+        unlink($getFilename['inputFile']);
+
+        unset($_SESSION['flows'][$token]);
+
+        $applNoList = implode(',', $generatedApplNos);
+
+        echo "<script>
+                window.location.href='index.php?redirection=$redirection&msg=success&applno=$applNoList&count=" . count($generatedApplNos) . "&mode=bulk';
+            </script>";
+
+    }
+
+    } else {
+
+        // ================================================================
+        // GENERAL MODE
+        // ================================================================
+
+
     //SCAN EXCEL FILE 
     if($objWorksheet){
 
@@ -212,7 +1270,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //Address
-                    if( $validateFunc->max_length($Address, 210) ) 
+                    if( $validateFunc->max_length($Address, 105) ) 
                     { 
                         $address[] = $row - 1; $errorCounter1++; 
                     }
@@ -647,11 +1705,6 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $NumberOfPackage       =   $validateFunc->trim_val($dataRow[$row]['C']);
                         $PackageCode           =   $validateFunc->trim_val($dataRow[$row]['D']);
                         $InvoiceNumber         =   $validateFunc->trim_val($dataRow[$row]['E']);
-                        if (is_numeric($InvoiceNumber) && $validateFunc->is_scientific_notation($InvoiceNumber)) {
-                            $InvoiceNumber = sprintf('%.0f', (float) $InvoiceNumber);
-                        } elseif (isset($dataRow[$row]['E']) && is_float($dataRow[$row]['E'])) {
-                            $InvoiceNumber = sprintf('%.0f', $dataRow[$row]['E']);
-                        }
                         $SuplementaryValue     =   $validateFunc->trim_val($dataRow[$row]['F']);
                         $ProcedureCode         =   $validateFunc->trim_val($dataRow[$row]['G']);
                         $ExtendedCode          =   $validateFunc->trim_val($dataRow[$row]['H']);
@@ -718,7 +1771,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //NumberOfPackage
-                    if( $validateFunc->max_length($NumberOfPackage, 6) ) 
+                    if( $validateFunc->max_length($NumberOfPackage, 10) ) 
                     { 
                         $numberOfPackage[] = $row - 1; $errorCounter1++; 
                     }
@@ -736,6 +1789,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     else if ( $r == 0 && (int)$NumberOfPackage <= 0 )
                     {
                         $numberOfPackageZero[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else if ( (float)$NumberOfPackage > 2147483647 )
+                    {
+                        $numberOfPackageTooLarge[] = $row - 1;
                         $errorCounter++;
                     }
 
@@ -763,20 +1821,17 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $invoiceNumberRequired[] = $row - 1;
                         $errorCounter++;
                     }
-                    else if( $validateFunc->is_scientific_notation($InvoiceNumber) )
+                    else
                     {
-                        $invoiceNumberScientific[] = $row - 1;
-                        $errorCounter++;
-                    }
-                    else if( $validateFunc->max_length($InvoiceNumber, 300) )
-                    {
-                        $invoiceNumber[] = $row - 1;
-                        $errorCounter1++;
-                    }
-                    else if( ($validateFunc->match_alphanum($InvoiceNumber)) == 0 )
-                    {
-                        $invoiceNumberMatch[] = $row - 1;
-                        $errorCounter++;
+                        if( $validateFunc->max_length($InvoiceNumber, 300) ) 
+                        { 
+                            $invoiceNumber[] = $row - 1; $errorCounter1++; 
+                        }
+                        if( ($validateFunc->match_char($InvoiceNumber)) == 0 )
+                        {
+                            $invoiceNumberMatch[] = $row - 1; 
+                            $errorCounter++; 
+                        }
                     }
 
                     //SuplementaryValue
@@ -831,7 +1886,12 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //ItemGrossWeight
-                    if( !empty($ItemGrossWeight) )
+                    if( empty($ItemGrossWeight) )
+                    {
+                        $itemGrossWeightRequired[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else
                     {
                         if( $validateFunc->max_length($ItemGrossWeight, 10) )
                         {
@@ -846,7 +1906,12 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //ItemNetWeight
-                    if( !empty($ItemNetWeight) )
+                    if( empty($ItemNetWeight) )
+                    {
+                        $itemNetWeightRequired[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else
                     {
                         if( $validateFunc->max_length($ItemNetWeight, 10) )
                         {
@@ -990,9 +2055,6 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
     }
 
     if ($errorCounter > 0 || $errorCounter1 > 0) {
-        
-        /* TEST */
-        // die(var_dump($validateFunc->match_char($Consignee)));
 
         /* ERROR MESSAGES */
         // General Sheet Validation
@@ -1023,7 +2085,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             //Address
             if(!empty($address)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Exceeds the max characters allowed (210)",
+                                    "ErrMsg" => "Exceeds the max characters allowed (105)",
                                     "Column" => "Address",
                                     "Rows" => implode(", " ,$address)
                                 );
@@ -1295,6 +2357,13 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Rows" => implode(", " ,$numberOfPackageZero)
                                 );
             }
+            if(!empty($numberOfPackageTooLarge)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Number of Package exceeds the maximum allowed value (2,147,483,647)",
+                                    "Column" => "Number of Package",
+                                    "Rows" => implode(", " ,$numberOfPackageTooLarge)
+                                );
+            }
 
             // PackageCode
             if(!empty($checkPackCode)){
@@ -1304,7 +2373,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Rows" => implode(", " ,$checkPackCode)
                                 );
             }
-            
+             
             // InvoiceNumber
             if(!empty($invoiceNumberRequired)){
                 $errorLists[] = array(
@@ -1313,13 +2382,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Rows" => implode(", " ,$invoiceNumberRequired)
                                 );
             }
-            if(!empty($invoiceNumberScientific)){
-                $errorLists[] = array(
-                                    "ErrMsg" => "Invalid format: Value was converted to scientific notation by Excel; format the Invoice Number column as Text and re-enter",
-                                    "Column" => "Invoice Number",
-                                    "Rows" => implode(", " ,$invoiceNumberScientific)
-                                );
-            }
+
             if(!empty($invoiceNumber)){
                 $errorLists[] = array(
                                     "ErrMsg" => "Exceeds the max characters allowed (300)",
@@ -1329,7 +2392,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             if(!empty($invoiceNumberMatch)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Only letters and numbers are allowed, no special characters",
+                                    "ErrMsg" => "Only letters, numbers, and spaces are allowed - no special characters",
                                     "Column" => "Invoice Number",
                                     "Rows" => implode(", " ,$invoiceNumberMatch)
                                 );
@@ -1410,6 +2473,14 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
 
             if(!empty($itemGrossWeightLength)){
                 $errorLists[] = array("ErrMsg" => "Exceeds the max characters allowed (10)", "Column" => "Item Gross Weight", "Rows" => implode(", ", $itemGrossWeightLength));
+            }
+
+            if(!empty($itemGrossWeightRequired)){
+                $errorLists[] = array("ErrMsg" => "Item Gross Weight is required", "Column" => "Item Gross Weight", "Rows" => implode(", ", $itemGrossWeightRequired));
+            }
+
+            if(!empty($itemNetWeightRequired)){
+                $errorLists[] = array("ErrMsg" => "Item Net Weight is required", "Column" => "Item Net Weight", "Rows" => implode(", ", $itemNetWeightRequired));
             }
 
             //ItemNetWeight
@@ -1533,8 +2604,6 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 $exchRate  = $lookupData->getExchangeRate($conn, 'USD');
 
                 // ----------------- CONSIGNEE ADDRESS: pull from BUYER master data ----------------- //
-                // Re-fetch the validated buyer record (same lookup used during validation)
-                // rather than re-using the free-typed $Address column from the Excel file.
                 $buyerRecord = $validateFunc->__checkValidConsignee($conn, $Consignee, $cltcode);
 
                 if ($buyerRecord) {
@@ -1720,11 +2789,6 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     $NumberOfPackage       =   $validateFunc->trim_val($dataRow3[$row3]['C']);
                     $PackageCode           =   $validateFunc->trim_val($dataRow3[$row3]['D']);
                     $InvoiceNumber         =   $validateFunc->trim_val($dataRow3[$row3]['E']);
-                    if (is_numeric($InvoiceNumber) && $validateFunc->is_scientific_notation($InvoiceNumber)) {
-                        $InvoiceNumber = sprintf('%.0f', (float) $InvoiceNumber);
-                    } elseif (isset($dataRow[$row]['E']) && is_float($dataRow[$row]['E'])) {
-                        $InvoiceNumber = sprintf('%.0f', $dataRow[$row]['E']);
-                    }
                     $SuplementaryValue     =   $validateFunc->trim_val($dataRow3[$row3]['F']);
                     $ProcedureCode         =   $validateFunc->trim_val($dataRow3[$row3]['G']);
                     $ExtendedCode          =   $validateFunc->trim_val($dataRow3[$row3]['H']);
@@ -1746,9 +2810,9 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 $ProcDesc               = $ProcedureCode;  
                 $CoCode                 = 'PH';
 
-                $ItemGrossWeight    = ($ItemGrossWeight === '') ? '' : $validateFunc->truncateDecimal(str_replace(',', '', $ItemGrossWeight), 2);
-                $ItemNetWeight      = ($ItemNetWeight === '') ? '' : $validateFunc->truncateDecimal(str_replace(',', '', $ItemNetWeight), 2);
-                $ItemInvoiceValue = $validateFunc->truncateDecimal(str_replace(',', '', $ItemInvoiceValue), 2);
+                $ItemGrossWeight  = ($ItemGrossWeight === '') ? '' : number_format(round((float)str_replace(',', '', $ItemGrossWeight), 2), 2, '.', '');
+                $ItemNetWeight    = ($ItemNetWeight === '') ? '' : number_format(round((float)str_replace(',', '', $ItemNetWeight), 2), 2, '.', '');
+                $ItemInvoiceValue = number_format(round((float)str_replace(',', '', $ItemInvoiceValue), 2), 2, '.', '');
                 
                 $ItemCode               = strtoupper($ItemCode);
                 $MarksAndNumber         = strtoupper($MarksAndNumber);
@@ -1943,3 +3007,5 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
 
 
     }
+
+    } // end $isBulkClient else-branch
