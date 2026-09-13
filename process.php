@@ -1764,7 +1764,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $marksAndNumberMatch[] = $row - 1; 
                         $errorCounter++; 
                     }
-                    else if( $validateFunc->max_length($MarksAndNumber, 70) ) 
+                    else if( $validateFunc->max_length($MarksAndNumber, 35) ) 
                     { 
                         $marksAndNumber[] = $row - 1; 
                         $errorCounter1++; 
@@ -2064,11 +2064,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
         /* ERROR MESSAGES */
         // General Sheet Validation
             //Consignee
-            if(!empty($consignee)){
+            if(!empty($marksAndNumber)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Exceeds the max characters allowed (70)",
-                                    "Column" => "Consignee",
-                                    "Rows" => implode(", " ,$consignee)
+                                    "ErrMsg" => "Exceeds the max characters allowed (35)",
+                                    "Column" => "Marks and Number",
+                                    "Rows" => implode(", " ,$marksAndNumber)
                                 );
             }
             if(!empty($consigneeMatch)){
