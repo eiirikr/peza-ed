@@ -643,7 +643,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                 $suplementaryValueLength[] = $row - 1;
                 $errorCounter++;
             }
-            else if( ($validateFunc->match_numbers($SuplementaryValue)) == 0 )
+            else if( !preg_match('/^[0-9]+$/', $SuplementaryValue) )
             {
                 $suplementaryValueMatch[] = $row - 1;
                 $errorCounter++;
