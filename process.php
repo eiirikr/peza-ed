@@ -1783,7 +1783,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
 
                     if ( $NumberOfPackage === '' )
                     {
-                        $numberOfPackageMatch[] = $row - 1;
+                        $numberOfPackageRequired[] = $row - 1;
                         $errorCounter++;
                     }
                     else if ( ($validateFunc->match_numbers($NumberOfPackage)) == 0 )
@@ -2350,9 +2350,16 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                                     "Rows" => implode(", " ,$numberOfPackage)
                                 );
             }
+            if(!empty($numberOfPackageRequired)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Number of Package is required",
+                                    "Column" => "Number of Package",
+                                    "Rows" => implode(", " ,$numberOfPackageRequired)
+                                );
+            }
             if(!empty($numberOfPackageMatch)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Number of Package is required and must contain numbers only",
+                                    "ErrMsg" => "Number of Package must contain numbers only",
                                     "Column" => "Number of Package",
                                     "Rows" => implode(", " ,$numberOfPackageMatch)
                                 );
