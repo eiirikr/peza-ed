@@ -1636,6 +1636,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                             $containerSizeRequired[] = $row - 1;
                             $errorCounter++;
                         }
+                        else if( ($validateFunc->match_alphanum($ContainerSize)) == 0 )
+                        {
+                            $containerSizeMatch[] = $row - 1;
+                            $errorCounter++;
+                        }
                         else 
                         { 
                             $checkContainerSizeExists = $validateFunc->__checkValidContainerSize($ContainerSize);
@@ -2272,6 +2277,9 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
 
                 if(!empty($containerSizeRequired)){
                     $errorLists[] = array("ErrMsg" => "Container Size is required", "Column" => "Container Size", "Rows" => implode(", ", $containerSizeRequired));
+                }
+                if(!empty($containerSizeMatch)){
+                    $errorLists[] = array("ErrMsg" => "Only letters and numbers are allowed - no special characters", "Column" => "Container Size", "Rows" => implode(", ", $containerSizeMatch));
                 }
                 if(!empty($checkContainerSize)){
                     $errorLists[] = array("ErrMsg" => "Invalid Container Size", "Column" => "Container Size", "Rows" => implode(", ", $checkContainerSize));
