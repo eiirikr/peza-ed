@@ -1832,7 +1832,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         { 
                             $invoiceNumber[] = $row - 1; $errorCounter1++; 
                         }
-                        if( ($validateFunc->match_char($InvoiceNumber)) == 0 )
+                        if( !preg_match('/^[A-Za-z0-9 ]+$/', $InvoiceNumber) )
                         {
                             $invoiceNumberMatch[] = $row - 1; 
                             $errorCounter++; 
