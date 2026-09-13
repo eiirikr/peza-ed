@@ -227,8 +227,8 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
         $PackageCode          = $validateFunc->trim_val($dataRow[$row]['V']);
         $InvoiceNumber        = $validateFunc->trim_val($dataRow[$row]['W']);
         $SuplementaryValue    = $validateFunc->trim_val($dataRow[$row]['X']);
-        $ProcedureCode        = $validateFunc->trim_val($dataRow[$row]['Y']);
-        $ExtendedCode         = $validateFunc->trim_val($dataRow[$row]['Z']);
+        $ProcedureCode        = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['Y'])));
+        $ExtendedCode         = strtoupper(trim($validateFunc->trim_val($dataRow[$row]['Z'])));
         $ItemGrossWeight      = $validateFunc->trim_val($dataRow[$row]['AA']);
         $ItemNetWeight        = $validateFunc->trim_val($dataRow[$row]['AB']);
         $ItemInvoiceValue     = $validateFunc->trim_val($dataRow[$row]['AC']);
@@ -651,29 +651,35 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
         }
 
         // ProcedureCode
-        if( !empty($ProcedureCode) ) {
+        if( empty($ProcedureCode) )
+        {
+            $procedureCodeRequired[] = $row - 1;
+            $errorCounter++;
+        }
+        else
+        {
             $checkProcedureCodeExists = $validateFunc->__checkValidNatlCode($ProcedureCode);
             if( !$checkProcedureCodeExists )
             {
                 $checkProcedureCode[] = $row - 1;
                 $errorCounter++;
             }
-        } else {
-            $checkProcedureCode[] = $row - 1;
-            $errorCounter++;
         }
 
         // ExtendedCode
-        if( !empty($ExtendedCode) ) {
+        if( empty($ExtendedCode) )
+        {
+            $extendedCodeRequired[] = $row - 1;
+            $errorCounter++;
+        }
+        else
+        {
             $checkExtendedCodeExists = $validateFunc->__checkValidExtCode($ExtendedCode);
             if( !$checkExtendedCodeExists )
             {
                 $checkExtCode[] = $row - 1;
                 $errorCounter++;
             }
-        } else {
-            $checkExtCode[] = $row - 1;
-            $errorCounter++;
         }
 
         // ItemGrossWeight
@@ -839,9 +845,11 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
         if(!empty($checkSuplementaryValue)){ $errorLists[] = array("ErrMsg" => "Supplementary Value required for the following item", "Column" => "Supplementary Value", "Rows" => implode(", ", $checkSuplementaryValue)); }
         if(!empty($checkSuplementaryValue1)){ $errorLists[] = array("ErrMsg" => "Supplementary Value is not allowed for the following item", "Column" => "Supplementary Value", "Rows" => implode(", ", $checkSuplementaryValue1)); }
 
-        if(!empty($checkProcedureCode)){ $errorLists[] = array("ErrMsg" => "Invalid or missing Procedure Code", "Column" => "Procedure Code", "Rows" => implode(", ", $checkProcedureCode)); }
-        if(!empty($checkExtCode)){ $errorLists[] = array("ErrMsg" => "Invalid or missing Extended Code", "Column" => "Extended Code", "Rows" => implode(", ", $checkExtCode)); }
+        if(!empty($procedureCodeRequired)){ $errorLists[] = array("ErrMsg" => "Procedure Code is required", "Column" => "Procedure Code", "Rows" => implode(", ", $procedureCodeRequired)); }
+        if(!empty($checkProcedureCode)){ $errorLists[] = array("ErrMsg" => "Invalid Procedure Code, please check", "Column" => "Procedure Code", "Rows" => implode(", ", $checkProcedureCode)); }
 
+        if(!empty($extendedCodeRequired)){ $errorLists[] = array("ErrMsg" => "Extended Code is required", "Column" => "Extended Code", "Rows" => implode(", ", $extendedCodeRequired)); }
+        if(!empty($checkExtCode)){ $errorLists[] = array("ErrMsg" => "Invalid Extended Code, please check", "Column" => "Extended Code", "Rows" => implode(", ", $checkExtCode)); }
         if(!empty($itemGrossWeightRequired)){ $errorLists[] = array("ErrMsg" => "Item Gross Weight is required", "Column" => "Item Gross Weight", "Rows" => implode(", ", $itemGrossWeightRequired)); }
         if(!empty($itemNetWeightRequired)){ $errorLists[] = array("ErrMsg" => "Item Net Weight is required", "Column" => "Item Net Weight", "Rows" => implode(", ", $itemNetWeightRequired)); }
         if(!empty($itemGrossWeightMatch)){ $errorLists[] = array("ErrMsg" => "Invalid entry (e.g. 0.00) - Required", "Column" => "Item Gross Weight", "Rows" => implode(", ", $itemGrossWeightMatch)); }
@@ -1711,8 +1719,8 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                         $PackageCode           =   $validateFunc->trim_val($dataRow[$row]['D']);
                         $InvoiceNumber         =   $validateFunc->trim_val($dataRow[$row]['E']);
                         $SuplementaryValue     =   $validateFunc->trim_val($dataRow[$row]['F']);
-                        $ProcedureCode         =   $validateFunc->trim_val($dataRow[$row]['G']);
-                        $ExtendedCode          =   $validateFunc->trim_val($dataRow[$row]['H']);
+                        $ProcedureCode         =   strtoupper(trim($validateFunc->trim_val($dataRow[$row]['G'])));
+                        $ExtendedCode          =   strtoupper(trim($validateFunc->trim_val($dataRow[$row]['H'])));
                         $ItemGrossWeight       =   $validateFunc->trim_val($dataRow[$row]['I']);
                         $ItemNetWeight         =   $validateFunc->trim_val($dataRow[$row]['J']);
                         $ItemInvoiceValue      =   $validateFunc->trim_val($dataRow[$row]['K']);
@@ -1847,7 +1855,7 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                             $suplementaryValueLength[] = $row - 1;
                             $errorCounter++;
                         }
-                        else if( ($validateFunc->match_numbers($SuplementaryValue)) == 0 )
+                        else if( !preg_match('/^[0-9]+$/', $SuplementaryValue) )
                         {
                             $suplementaryValueMatch[] = $row - 1; 
                             $errorCounter++; 
@@ -1855,8 +1863,13 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                     }
 
                     //ProcedureCode
-                    if( !empty($ProcedureCode) ) {
-
+                    if( empty($ProcedureCode) )
+                    {
+                        $procedureCodeRequired[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else
+                    {
                         //CHECK ProcedureCode IF EXISTS
                         $checkProcedureCodeExists = $validateFunc->__checkValidNatlCode($ProcedureCode);
 
@@ -1865,16 +1878,16 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                             $checkProcedureCode[] = $row - 1;
                             $errorCounter++;
                         }
-
-                    } else {
-
-                        $checkProcedureCode[] = $row - 1;
-                        $errorCounter++;
                     }
 
                     //ExtendedCode
-                    if( !empty($ExtendedCode) ) {
-
+                    if( empty($ExtendedCode) )
+                    {
+                        $extendedCodeRequired[] = $row - 1;
+                        $errorCounter++;
+                    }
+                    else
+                    {
                         //CHECK ExtendedCode IF EXISTS
                         $checkExtendedCodeExists = $validateFunc->__checkValidExtCode($ExtendedCode);
 
@@ -1883,11 +1896,6 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
                             $checkExtCode[] = $row - 1;
                             $errorCounter++;
                         }
-
-                    } else {
-
-                        $checkExtCode[] = $row - 1;
-                        $errorCounter++;
                     }
 
                     //ItemGrossWeight
@@ -2460,18 +2468,32 @@ $excelDetails = $processFunc->__getPHPExcelDetails($_FILES['file']['name']);
             }
             
             // ProcedureCode
+            if(!empty($procedureCodeRequired)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Procedure Code is required",
+                                    "Column" => "Procedure Code",
+                                    "Rows" => implode(", " ,$procedureCodeRequired)
+                                );
+            }
             if(!empty($checkProcedureCode)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Invalid or missing Procedure Code",
+                                    "ErrMsg" => "Invalid Procedure Code, please check",
                                     "Column" => "Procedure Code",
                                     "Rows" => implode(", " ,$checkProcedureCode)
                                 );
             }
 
             // ExtendedCode
+            if(!empty($extendedCodeRequired)){
+                $errorLists[] = array(
+                                    "ErrMsg" => "Extended Code is required",
+                                    "Column" => "Extended Code",
+                                    "Rows" => implode(", " ,$extendedCodeRequired)
+                                );
+            }
             if(!empty($checkExtCode)){
                 $errorLists[] = array(
-                                    "ErrMsg" => "Invalid or missing Extended Code",
+                                    "ErrMsg" => "Invalid Extended Code, please check",
                                     "Column" => "Extended Code",
                                     "Rows" => implode(", " ,$checkExtCode)
                                 );
